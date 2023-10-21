@@ -40,6 +40,6 @@ fun TituloJuego(
 @Composable
 fun GreetingPreview() {
     TituloJuego(
-        navController = rememberNavController()
+        navController = rememberNavController() //para moverte pantalla
     )
 }
