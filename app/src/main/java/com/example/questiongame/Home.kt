@@ -7,7 +7,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -58,12 +61,18 @@ fun TituloJuego(
             onClick = {
                 navController.navigate(route = Screen.SecondScreen.route)
             }) {
+
             Text(
                 text = "Jugar",
                 color = Color.Red,
                 fontSize = MaterialTheme.typography.headlineMedium.fontSize,
                 fontWeight = FontWeight.Bold
             )
+            Icon(
+                Icons.Default.PlayArrow,
+                contentDescription = null
+            )
+
         }
     }
 

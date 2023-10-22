@@ -1,9 +1,15 @@
 package com.example.questiongame
 
+import android.graphics.drawable.Icon
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,15 +26,14 @@ fun SecondScreen(
     navController: NavController
 ){
     Column {
-        Text(
-            modifier = Modifier.clickable {
-                navController.navigate(route = Screen.Home.route) //AQUI TE VAS
-            },
-            text = "Volver",
-            color = MaterialTheme.colorScheme.primary,
-            fontSize = MaterialTheme.typography.headlineMedium.fontSize,
-            fontWeight = FontWeight.Bold
-        )
+
+        Button(onClick = {  navController.navigate(route = Screen.Home.route)}) {
+            Icon(
+                Icons.Default.Home,
+                contentDescription = null
+            )
+        }
+
 
     }
     Box(
