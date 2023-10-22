@@ -27,7 +27,8 @@ import com.example.questiongame.ui.theme.QuestionGameTheme
 // como cambiar de escenas https://youtu.be/glyqjzkc4fk
 
 
-
+// como meter screen
+// 1 vete a screen.kt
 class MainActivity : ComponentActivity() {
 
 
@@ -41,15 +42,6 @@ class MainActivity : ComponentActivity() {
 
                 SetUpNavGraph(navController = navController)
 
-                /*
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    //Greeting("Android")
-                    //TituloJuego("Askers!")
-                }*/
             }
         }
     }
