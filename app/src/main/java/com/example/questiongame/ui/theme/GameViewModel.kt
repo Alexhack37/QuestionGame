@@ -1,16 +1,12 @@
 package com.example.questiongame.ui.theme
 
-import android.os.CountDownTimer
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.questiongame.TimeFormatExt.timeFormat
 import kotlinx.coroutines.launch
-import java.util.concurrent.TimeUnit
 
 class GameViewModel : ViewModel() {
 
-    private var countDownTimer: CountDownTimer? = null
+    /*private var countDownTimer: CountDownTimer? = null
 
     private val userInputSecond = TimeUnit.SECONDS.toMillis(10)
 
@@ -54,5 +50,5 @@ class GameViewModel : ViewModel() {
         countDownTimer?.cancel()
         timerText.value = initialTotalTimeInMillis.timeFormat()
         timeLeft.value = initialTotalTimeInMillis
-    }
+    }*/
 }
