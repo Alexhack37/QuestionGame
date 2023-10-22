@@ -38,7 +38,7 @@ fun TituloJuego(
             //SI A;ANDISTE TU NUEVA POANTALLA EN SCREEN.KT PUEDES PONER UN MODIFIER AL ELEMENTO
             //PARA QUIE SEA CLICLEABE Y PODER IR A LA PANTALLA EN ESTE CASO SECONDCREEN
             modifier = Modifier.clickable {
-                navController.navigate(route = Screen.SecondScreen.route) //AQUI TE VAS
+                navController.navigate(route = Screen.CountDownScreen.route) //AQUI TE VAS
             },
             text = "Askers!",
             color = Color.Red,

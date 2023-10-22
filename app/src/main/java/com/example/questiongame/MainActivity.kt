@@ -27,7 +27,8 @@ import com.example.questiongame.ui.theme.QuestionGameTheme
 // como cambiar de escenas https://youtu.be/glyqjzkc4fk
 
 
-
+// como meter screen
+// 1 vete a screen.kt
 class MainActivity : ComponentActivity() {
 
 
