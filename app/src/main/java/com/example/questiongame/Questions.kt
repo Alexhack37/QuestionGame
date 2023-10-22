@@ -9,6 +9,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -33,14 +34,30 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-
+import com.example.questiongame.ui.theme.CountDownTimerViewModel
 
 
 @Composable
-fun Options(navController: NavController){
+fun Options(
+    navController: NavController,
+    viewModel: CountDownTimerViewModel = viewModel()
+){
+    Column (
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ){
+        viewModel.apply {
+            Text(text = timerText.value, fontSize = 28.sp)
+            startCountDownTimer(navController)
 
+        }
+    }
+
+    //-------------------javi----------------------
     Column {
         Button(onClick = {  navController.navigate(route = Screen.Home.route)}) {
             Icon(
@@ -84,10 +101,10 @@ fun Options(navController: NavController){
 
 
 }
+
 @Preview(showBackground = true)
 @Composable
 fun QuestionPreview() {
-
     Options(
         navController = rememberNavController()
     )

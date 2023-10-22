@@ -19,8 +19,12 @@ import androidx.navigation.compose.rememberNavController
 import com.example.questiongame.ui.theme.CountDownTimerViewModel
 
 
+
+//FUNCION QUE DICE SI EXISTE O NO O ES CORRECTA O NO
+/*
 @Composable
 fun CountDownScreen(
+
     navController: NavController,
     modifier: Modifier = Modifier,
     viewModel: CountDownTimerViewModel = viewModel()) {
@@ -32,22 +36,11 @@ fun CountDownScreen(
         viewModel.apply {
             Text(text = timerText.value, fontSize = 28.sp)
             startCountDownTimer(navController)
-        /*
-            Button(onClick = {
-                if(isPlaying.value) stopCountDownTimer() else startCountDownTimer()
-            }) {
-                Text(text = if (isPlaying.value) "Stop CountDown" else "Start CountDown")
-            }
-            Button(onClick = {
-                resetCountDownTimer()
-            }){
-                Text(text = "Reset Timer")
-            }*/
+
         }
     }
-    //EndQuestion(showBox = true, correct = true)
 }
-
+*/
 @Composable
 fun EndQuestion(showBox: Boolean, correct: Int) {
     if (showBox) {
@@ -81,8 +74,8 @@ fun EndQuestion(showBox: Boolean, correct: Int) {
 @Preview(showBackground = true)
 @Composable
 fun CountDownScreenPreview() {
-    CountDownScreen(
+    /*CountDownScreen(
         navController = rememberNavController()
-    )
-    //EndQuestion(showBox = true, correct = true)
+    )*/
+    EndQuestion(showBox = true, correct = 2)
 }

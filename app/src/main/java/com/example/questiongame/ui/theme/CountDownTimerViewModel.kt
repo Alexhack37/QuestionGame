@@ -32,7 +32,11 @@ class CountDownTimerViewModel : ViewModel(){
                 timeLeft.value = currentTimeLeft
             }
             override fun onFinish(){
+                
                 //EndQuestion(showBox = true, 2) AQUIII
+
+
+
                 //navController.navigate(route = com.example.questiongame.Screen.Home.route)
                 timerText.value = initialTotalTimeInMillis.timeFormat()
                 isPlaying.value = false
