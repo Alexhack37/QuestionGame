@@ -13,21 +13,20 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.questiongame.ui.theme.GameViewModel
-import com.example.questiongame.CountDownTimerViewModel
+import com.example.questiongame.ui.theme.CountDownTimerViewModel
 
 
 @Composable
 fun CountDownScreen(
     navController: NavController,
     modifier: Modifier = Modifier,
-    gameViewModel: GameViewModel = viewModel()) {
+    viewModel: CountDownTimerViewModel = viewModel()) {
     Column (
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        gameViewModel.apply {
+        viewModel.apply {
             Text(text = timerText.value, fontSize = 28.sp)
             Button(onClick = {
                 if(isPlaying.value) stopCountDownTimer() else startCountDownTimer()

@@ -1,7 +1,6 @@
-package com.example.questiongame
+package com.example.questiongame.ui.theme
 
 import android.os.CountDownTimer
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -37,8 +36,8 @@ class CountDownTimerViewModel : ViewModel(){
                 isPlaying.value = false
                 //AQUÍ CAMBIAR DE EESCENA
             }
-        }
-    }.start()
+        }.start()
+    }
 
     fun stopCountDownTimer() = viewModelScope.launch {
         isPlaying.value = false
