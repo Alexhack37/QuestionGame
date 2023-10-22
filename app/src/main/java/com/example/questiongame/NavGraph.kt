@@ -28,12 +28,17 @@ fun SetUpNavGraph(
         composable(
             route = Screen.Category.route
         ){
-            CountDownScreen(navController = navController)
+            //CountDownScreen(navController = navController)
         }
         composable(
             route = Screen.CountDownScreen.route
         ){
-            CountDownScreen(navController = navController)
+            //CountDownScreen(navController = navController)
+        }
+        composable(
+            route = Screen.Questions.route
+        ){
+            Options(navController= navController)
         }
     }
 }
