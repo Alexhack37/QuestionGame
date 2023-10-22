@@ -25,7 +25,11 @@ fun SetUpNavGraph(
         ){
             SecondScreen(navController = navController)
         }
-
+        composable(
+            route = Screen.Category.route
+        ){
+            CountDownScreen(navController = navController)
+        }
         composable(
             route = Screen.CountDownScreen.route
         ){
@@ -34,4 +38,5 @@ fun SetUpNavGraph(
     }
 }
 // pon un compensable por tu pantalla
-//4 copia la funcion preciew que tiene el navcontroller (de tu .kt de ventana) y aniade navController: NavController a tu formula (normalmente la de arriba que no tiene preivew)
+//4 copia la funcion preview que tiene el navcontroller (de  Home.kt ejemplo) pegala abajo de tu
+// nuevo .kt y aniade navController: NavController a tu formula (normalmente la de arriba que no tiene preivew) en los atributos
