@@ -27,6 +27,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -37,8 +38,56 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navOptions
 import com.example.questiongame.ui.theme.CountDownTimerViewModel
+import java.io.BufferedReader
+import java.io.File
 
+
+
+
+//@Composable
+fun readFileContent(filePath: String): String {
+    val file = File(filePath)
+    val content = StringBuilder()
+    try {
+        val br = BufferedReader(file.reader())
+        var line: String?
+        while (br.readLine().also { line = it } != null) {
+            content.append(line)
+        }
+        br.close()
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
+    return content.toString()
+}
+@Composable
+fun DisplayFileContent(content: String) {
+    Column(
+        modifier = Modifier.fillMaxSize().padding(top = 100.dp),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
+        Text(
+            text = "texther",
+            fontSize = 16.sp
+        )
+        Text(
+            text = content,
+            fontSize = 16.sp
+        )
+    }
+}
+
+@Composable
+fun FileReadingScreen() {
+    val filePath = "app/src/main/res/xml/bbddQuestions.txt" // Reemplaza con la ruta de tu archivo
+    val fileContent = remember { readFileContent(filePath) }
+
+    DisplayFileContent(fileContent)
+}
 
 @Composable
 fun Options(
@@ -75,7 +124,7 @@ fun Options(
         ) {
 
 
-        Text("En Stranger Things, ¿qué criatura aterradora acecha la ciudad de Hawkins?", fontSize = 20.sp,)
+        //Text("En Stranger Things, ¿qué criatura aterradora acecha la ciudad de Hawkins?", fontSize = 20.sp,)
         Button(onClick = { /*TODO*/ }, Modifier.padding(top = 150.dp),colors=ButtonDefaults.buttonColors(containerColor = Color.Green),shape= RoundedCornerShape(20.dp)){
 
             Text("Opcion1",
@@ -105,6 +154,7 @@ fun Options(
 @Preview(showBackground = true)
 @Composable
 fun QuestionPreview() {
+    FileReadingScreen()
     Options(
         navController = rememberNavController()
     )
