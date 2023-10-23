@@ -54,7 +54,7 @@ fun SecondScreen(
             Button(
 
                 onClick = {
-                    navController.navigate(route = Screen.Questions.route)
+                    navController.navigate(route = Screen.Category.route)
                 }) {
                 Text(
                     text = "Jugar",

@@ -81,11 +81,59 @@ fun QuestionScreen(
             Option("c) Steven Spielberg", false),
             Option("d) Christopher Nolan", false)
         )),
-        Question("Which actor portrayed the character Jack Dawson in the 1997 film 'Titanic'?", listOf(
+        Question("¿Quién interpreta a Jack Dawson en la película 'Titanic'?", listOf(
             Option("a) Leonardo DiCaprio", true),
             Option("b) Tom Hanks", false),
             Option("c) Johnny Depp", false),
             Option("d) Brad Pitt", false)
+        )),
+        Question("¿Quién interpreta a James Bond en la película 'Casino Royale'?", listOf(
+            Option("a) Sean Connery", false),
+            Option("b) Pierce Brosnan", false),
+            Option("c) Daniel Craig", true),
+            Option("d) Roger Moore", false)
+        )),
+        Question("¿Cuál de las siguientes películas es una obra de ciencia ficción dirigida por Ridley Scott?", listOf(
+            Option("a) The Silence of the Lambs", false),
+            Option("b) Blade Runner", true),
+            Option("c) The Godfather", false),
+            Option("d) Schindler's List", false)
+        )),
+        Question("¿Quién dirigió la película 'El Padrino'?", listOf(
+            Option("a) Martin Scorsese", false),
+            Option("b) Quentin Tarantino", false),
+            Option("c) Francis Ford Coppola", true),
+            Option("d) Alfred Hitchcock", false)
+        )),
+        Question("¿Quién interpreta a Tony Stark en el Universo Cinematográfico de Marvel (MCU)?", listOf(
+            Option("a) Chris Hemsworth", false),
+            Option("b) Robert Downey Jr.", true),
+            Option("c) Chris Evans", false),
+            Option("d) Mark Ruffalo", false)
+        )),
+        Question("¿Cuál de las siguientes películas es una comedia de ciencia ficción que parodia la cultura geek y los videojuegos?", listOf(
+            Option("a) Scott Pilgrim vs. the World", true),
+            Option("b) Inception", false),
+            Option("c) Blade Runner", false),
+            Option("d) The Dark Knight", false)
+        )),
+        Question("¿Quién interpretó a Frodo Bolsón en la trilogía de 'El Señor de los Anillos'?", listOf(
+            Option("a) Elijah Wood", true),
+            Option("b) Ian McKellen", false),
+            Option("c) Viggo Mortensen", false),
+            Option("d) Orlando Bloom", false)
+        )),
+        Question("¿Quién dirigió la película 'Parasite', que ganó el Premio de la Academia a la Mejor Película en 2020?", listOf(
+            Option("a) Bong Joon-ho", true),
+            Option("b) Park Chan-wook", false),
+            Option("c) Kim Ki-duk", false),
+            Option("d) Hong Sang-soo", false)
+        )),
+        Question("¿Quién interpreta a Katniss Everdeen en la serie de películas 'Los juegos del hambre'?", listOf(
+            Option("a) Jennifer Aniston", false),
+            Option("b) Scarlett Johansson", false),
+            Option("c) Jennifer Lawrence", true),
+            Option("d) Anne Hathaway", false)
         ))
 
         // Agrega más preguntas aquí
@@ -119,6 +167,7 @@ fun QuestionScreen(
             Spacer(modifier = Modifier.height(16.dp))
             question.options.forEach { option ->
                 RadioButton(
+
                     selected = option == selectedOption,
                     onClick = { selectedOption = option },
                     modifier = Modifier.fillMaxWidth()

@@ -28,23 +28,23 @@ fun CategorySelector(
         contentAlignment = Alignment.TopCenter
     ) {
         Button(onClick = {
-            //navController.navigate(route = Screen.Question.route)
+            navController.navigate(route = Screen.Questions.route)
         }, Modifier.padding(top = 200.dp)){
-            Text("TV",
+            Text("MOVIES",
                     fontSize = 50.sp
             )
             //Spacer(modifier = Modifier.width(8.dp)), HUECO ENTRE ICONO Y TEXTO
             //Icon(imageVector = Icons.Default.Search, contentDescription = null
         }
             Button(onClick = {
-                //navController.navigate(route = Screen.Question.route)
+                navController.navigate(route = Screen.QuestionsTV.route)
             }, Modifier.padding(top = 375.dp)){
                 Text("SERIES",
                     fontSize = 50.sp)
             }
 
         Button(onClick = {
-            //navController.navigate(route = Screen.Question.route)
+            navController.navigate(route = Screen.QuestionsBook.route)
         }, Modifier.padding(top = 550.dp)){
             Text("BOOKS",
                 fontSize = 50.sp)
