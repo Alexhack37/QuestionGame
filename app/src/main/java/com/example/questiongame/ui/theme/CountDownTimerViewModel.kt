@@ -41,7 +41,7 @@ class CountDownTimerViewModel : ViewModel(){
             }
         }.start()
         if(time> 1){
-            navController.navigate(route = com.example.questiongame.Screen.Home.route)
+            navController.navigate(route = com.example.questiongame.Screen.PuntuationScreen.route)
             time =0
         }
     }
