@@ -41,6 +41,76 @@ fun CountDownScreen(
     }
 }
 */
+
+
+//@Composable
+
+
+
+
+/*
+@Composable
+fun Options(
+    navController: NavController,
+    viewModel: CountDownTimerViewModel = viewModel()
+){
+    Column (
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ){
+        viewModel.apply {
+            Text(text = timerText.value, fontSize = 28.sp)
+            startCountDownTimer(navController)
+
+        }
+    }
+
+    //-------------------javi----------------------
+    Column {
+        Button(onClick = {  navController.navigate(route = Screen.Home.route)}) {
+            Icon(
+                Icons.Default.ArrowBack,
+                contentDescription = null
+            )
+        }
+
+    }
+    Box(
+        modifier = Modifier.fillMaxSize().offset(y = (70).dp), //positivo hacia abajo
+        contentAlignment = Alignment.TopCenter,
+
+
+        ) {
+
+
+        //Text("En Stranger Things, ¿qué criatura aterradora acecha la ciudad de Hawkins?", fontSize = 20.sp,)
+        Button(onClick = { /*TODO*/ }, Modifier.padding(top = 150.dp),colors=ButtonDefaults.buttonColors(containerColor = Color.Green),shape= RoundedCornerShape(20.dp)){
+
+            Text("Opcion1",
+                fontSize = 50.sp
+            )
+            //Spacer(modifier = Modifier.width(8.dp)), HUECO ENTRE ICONO Y TEXTO
+            //Icon(imageVector = Icons.Default.Search, contentDescription = null
+        }
+        Button(onClick = { /*TODO*/ }, Modifier.padding(top = 300.dp),colors=ButtonDefaults.buttonColors(containerColor = Color.Red)){
+            Text("Opcion2",
+                fontSize = 50.sp)
+        }
+
+        Button(onClick = { /*TODO*/ }, Modifier.padding(top = 450.dp),colors=ButtonDefaults.buttonColors(containerColor = Color.Blue)){
+            Text("Opcion3",
+                fontSize = 50.sp)
+        }
+        Button(onClick = { /*TODO*/ }, Modifier.padding(top = 600.dp),colors=ButtonDefaults.buttonColors(containerColor = Color.Yellow)){
+            Text("Opcion4",
+                fontSize = 50.sp)
+        }
+    }
+
+
+}
+*/
 @Composable
 fun EndQuestion(showBox: Boolean, correct: Int) {
     if (showBox) {

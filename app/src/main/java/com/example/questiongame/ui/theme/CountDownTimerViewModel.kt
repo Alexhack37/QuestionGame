@@ -1,6 +1,7 @@
 package com.example.questiongame.ui.theme
 
 import android.os.CountDownTimer
+import android.util.Log
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -13,7 +14,7 @@ class CountDownTimerViewModel : ViewModel(){
 
     private var countDownTimer: CountDownTimer? = null
 
-    private val userInputSecond = TimeUnit.SECONDS.toMillis(2)
+    private val userInputSecond = TimeUnit.SECONDS.toMillis(10)
 
     val initialTotalTimeInMillis = userInputSecond
     var timeLeft = mutableStateOf(initialTotalTimeInMillis)
@@ -36,8 +37,8 @@ class CountDownTimerViewModel : ViewModel(){
                 //EndQuestion(showBox = true, 2) AQUIII
 
 
-
-                //navController.navigate(route = com.example.questiongame.Screen.Home.route)
+                Log.d("tag","cambio")
+                navController.navigate(route = com.example.questiongame.Screen.Home.route)
                 timerText.value = initialTotalTimeInMillis.timeFormat()
                 isPlaying.value = false
             }

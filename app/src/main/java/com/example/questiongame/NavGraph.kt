@@ -9,10 +9,11 @@ import androidx.navigation.compose.composable
 
 @Composable
 fun SetUpNavGraph(
-    navController: NavHostController
+    navController: NavHostController,
 ){
     NavHost(navController = navController,
-        startDestination = Screen.Home.route
+        startDestination = Screen.Home.route,
+
     ){
         composable(
             route = Screen.Home.route
@@ -38,7 +39,7 @@ fun SetUpNavGraph(
         composable(
             route = Screen.Questions.route
         ){
-            Options(navController= navController)
+            QuestionScreen( navController= navController)
         }
     }
 }
