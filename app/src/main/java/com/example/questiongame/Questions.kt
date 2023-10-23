@@ -113,7 +113,7 @@ fun QuestionScreen(
         if (currentQuestion < questions.size) {
             val question = questions[currentQuestion]
             Box(){
-                Text(text = question.text, style = MaterialTheme.typography.bodySmall)
+                Text(text = question.text, style = MaterialTheme.typography.bodyLarge)
             }
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -125,6 +125,7 @@ fun QuestionScreen(
                 )
                 Text(
                     text = option.text,
+                    style = MaterialTheme.typography.bodyLarge,
                     modifier = Modifier
                         .padding(start = 8.dp)
                         .clickable { selectedOption = option }
