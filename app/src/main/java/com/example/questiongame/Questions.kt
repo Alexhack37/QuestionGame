@@ -190,11 +190,10 @@ fun QuestionScreen(
                         val isCorrect = selectedOption!!.isCorrect // Comprueba si la opción seleccionada es correcta
                         if (isCorrect) {
                             total++
-                            message = "Correcto!"
+
 
 
                         } else {
-                            message = "Incorrecto"
                             total+=0
                             // La opción seleccionada es incorrecta, puedes mostrar un mensaje de "Incorrecto".
                         }
@@ -223,8 +222,8 @@ fun QuestionScreen(
 
         } else {
             // Muestra un mensaje o pantalla de finalización
-            Text(text = "total points $total")
-            total = 0
+            navController.navigate(route = Screen.PuntuationScreen.route)
+
         }
 
     }

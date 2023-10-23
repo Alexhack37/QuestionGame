@@ -30,7 +30,7 @@ fun CategorySelector(
         Button(onClick = {
             navController.navigate(route = Screen.Questions.route)
         }, Modifier.padding(top = 200.dp)){
-            Text("MOVIES",
+            Text("PELICULAS",
                     fontSize = 50.sp
             )
             //Spacer(modifier = Modifier.width(8.dp)), HUECO ENTRE ICONO Y TEXTO
@@ -46,7 +46,7 @@ fun CategorySelector(
         Button(onClick = {
             navController.navigate(route = Screen.QuestionsBook.route)
         }, Modifier.padding(top = 550.dp)){
-            Text("BOOKS",
+            Text("LIBROS",
                 fontSize = 50.sp)
         }
     }

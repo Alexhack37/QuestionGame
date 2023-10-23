@@ -38,8 +38,8 @@ data class OptionTV(val text: String, val isCorrect: Boolean)
 data class QuestionTV(val text: String, val options: List<Option>)
 
 
-var totalTV =0
-var resetTV =0
+
+
 
 @Composable
 fun TimerTV(
@@ -184,11 +184,8 @@ fun QuestionScreenTV(
                         val isCorrect = selectedOptionTv!!.isCorrect // Comprueba si la opción seleccionada es correcta
                         if (isCorrect) {
                             total++
-                            message = "Correcto!"
-
 
                         } else {
-                            message = "Incorrecto"
                             total+=0
                             // La opción seleccionada es incorrecta, puedes mostrar un mensaje de "Incorrecto".
                         }
@@ -217,8 +214,8 @@ fun QuestionScreenTV(
 
         } else {
             // Muestra un mensaje o pantalla de finalización
-            Text(text = "total points $totalTV")
-            totalTV = 0
+            navController.navigate(route = Screen.PuntuationScreen.route)
+
         }
 
     }

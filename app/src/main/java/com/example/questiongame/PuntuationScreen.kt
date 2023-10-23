@@ -1,10 +1,14 @@
 package com.example.questiongame
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -20,6 +24,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.questiongame.ui.theme.CountDownTimerViewModel
+import com.example.questiongame.ui.theme.restTime
+import kotlin.math.absoluteValue
 
 
 @Composable
@@ -27,27 +34,56 @@ fun PuntuationScreen(
     modifier : Modifier = Modifier,
     navController: NavController
     ) {
+    Column {
+        Button(onClick = { navController.navigate(route = Screen.Home.route) }) {
+            Icon(
+                Icons.Default.Home,
+                contentDescription = null
+            )
+    }
+
+    }
     var numOfPoints by remember  { mutableStateOf(0) }
+    var rest=(restTime.toInt()/1000)
+    numOfPoints=total* (restTime.toInt()/1000)
     Box(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
             .offset(y = (150).dp),
         contentAlignment = Alignment.TopCenter
     ) {
         Text(
-            text = " YOU GET \n$numOfPoints POINTS",
+            text = " ACIERTOS $total",
+            color = Color.Black,
+            fontSize = 50.sp,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            modifier=Modifier.padding(top = 100.dp),
+            text = " TIEMPO  $rest",
+            color = Color.Black,
+            fontSize = 50.sp,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            modifier=Modifier.padding(top = 200.dp),
+            text = " $numOfPoints PUNTOS",
             color = Color.Black,
             fontSize = 50.sp,
             fontWeight = FontWeight.Bold
         )
 
 
+
         Button(onClick = {
-            //navController.navigate(route = Screen.Question.route)
+            total=0
+            navController.navigate(route = Screen.Category.route)
         }, Modifier.padding(top = 450.dp)) {
             Text(
-                "Play Again",
-                fontSize = 40.sp
+                "VOLVER A JUGAR",
+                fontSize = 35.sp
             )
+
         }
 
     }

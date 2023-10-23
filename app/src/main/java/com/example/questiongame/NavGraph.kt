@@ -55,6 +55,11 @@ fun SetUpNavGraph(
             QuestionScreenBooks( navController= navController)
             TimerBooks(navController = rememberNavController())
         }
+        composable(
+            route = Screen.PuntuationScreen.route
+        ){
+          PuntuationScreen(navController = navController)
+        }
     }
 }
 // pon un compensable por tu pantalla

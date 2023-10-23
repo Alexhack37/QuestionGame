@@ -8,6 +8,7 @@ sealed class Screen(val route: String){
     object Questions: Screen(route = "Questions_Screen")
     object QuestionsTV: Screen(route = "QuestionsTV_Screen")
     object QuestionsBook: Screen(route = "QuestionsBook_Screen")
+    object PuntuationScreen: Screen(route = "PuntuationScreen_Screen")
 
 }
 //2 aniade tu screen aqui y vete a Navgraph.kt
