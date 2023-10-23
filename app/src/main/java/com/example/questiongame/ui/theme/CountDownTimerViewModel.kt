@@ -35,14 +35,13 @@ class CountDownTimerViewModel : ViewModel(){
             override fun onFinish(){
                 timerText.value = initialTotalTimeInMillis.timeFormat()
                 isPlaying.value = false
+                stopCountDownTimer()
                 time +=1
-
-
             }
         }.start()
-        if(time> 1){
+        if(time > 1){
             navController.navigate(route = com.example.questiongame.Screen.Home.route)
-            time =0
+            time = 0
         }
     }
 
