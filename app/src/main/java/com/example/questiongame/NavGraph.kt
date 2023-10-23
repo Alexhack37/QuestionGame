@@ -1,7 +1,6 @@
 package com.example.questiongame
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -42,6 +41,11 @@ fun SetUpNavGraph(
         ){
             QuestionScreen( navController= navController)
             Timer(navController = rememberNavController())
+        }
+        composable(
+            route = Screen.PuntuationScreen.route
+        ){
+            PuntuationScreen( navController= navController)
         }
     }
 }
