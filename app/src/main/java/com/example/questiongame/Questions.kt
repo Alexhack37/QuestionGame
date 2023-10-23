@@ -39,6 +39,7 @@ data class Question(val text: String, val options: List<Option>)
 
 
 var total =0
+var reset =0
 
 @Composable
 fun Timer(
@@ -56,7 +57,11 @@ fun Timer(
         viewModel.apply {
             Text(text = timerText.value, fontSize = 28.sp)
             startCountDownTimer(navController)
-
+            /*
+            if(reset > 0){
+                stopCountDownTimer()
+                //resetCountDownTimer()
+            }*/
         }
     }
 }
@@ -95,9 +100,7 @@ fun QuestionScreen(
                 Icons.Default.ArrowBack,
                 contentDescription = null
             )
-
         }
-
     }
 
 
@@ -146,6 +149,7 @@ fun QuestionScreen(
                             // La opción seleccionada es incorrecta, puedes mostrar un mensaje de "Incorrecto".
                         }
                         currentQuestion++
+                        reset = 1
                         selectedOption = null
                     }
                 },
@@ -154,6 +158,7 @@ fun QuestionScreen(
                     .align(Alignment.CenterHorizontally)
             ) {
                 Text(text ="Siguiente")
+                reset = 0
             }
 
             // Mostrar el mensaje en la interfaz de usuario
