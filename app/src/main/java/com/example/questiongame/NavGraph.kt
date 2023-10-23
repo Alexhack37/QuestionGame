@@ -5,6 +5,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 
 
 @Composable
@@ -40,6 +41,7 @@ fun SetUpNavGraph(
             route = Screen.Questions.route
         ){
             QuestionScreen( navController= navController)
+            Timer(navController = rememberNavController())
         }
     }
 }

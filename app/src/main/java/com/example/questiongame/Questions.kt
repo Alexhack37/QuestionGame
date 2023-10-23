@@ -41,6 +41,27 @@ data class Question(val text: String, val options: List<Option>)
 var total =0
 
 @Composable
+fun Timer(
+    viewModel: CountDownTimerViewModel = viewModel(),
+    navController: NavController
+    ){
+    //TIMER
+    Column (
+        modifier = Modifier
+            .fillMaxSize()
+            .offset(y = (60).dp),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ){
+        viewModel.apply {
+            Text(text = timerText.value, fontSize = 28.sp)
+            startCountDownTimer(navController)
+
+        }
+    }
+}
+
+@Composable
 fun QuestionScreen(
     navController: NavController,
     viewModel: CountDownTimerViewModel = viewModel()) {
@@ -74,24 +95,12 @@ fun QuestionScreen(
                 Icons.Default.ArrowBack,
                 contentDescription = null
             )
+
         }
 
     }
 
-    //TIMER
-    Column (
-        modifier = Modifier
-            .fillMaxSize()
-            .offset(y = (60).dp),
-        verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ){
-        viewModel.apply {
-            Text(text = timerText.value, fontSize = 28.sp)
-            startCountDownTimer(navController)
 
-        }
-    }
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -127,8 +136,9 @@ fun QuestionScreen(
                     if (selectedOption != null) {
                         val isCorrect = selectedOption!!.isCorrect // Comprueba si la opción seleccionada es correcta
                         if (isCorrect) {
-                            message = "Correcto!"
                             total++
+                            message = "Correcto!"
+
 
                         } else {
                             message = "Incorrecto"
@@ -159,9 +169,11 @@ fun QuestionScreen(
         } else {
             // Muestra un mensaje o pantalla de finalización
             Text(text = "total points $total")
-            total =0
+            total = 0
         }
+
     }
+
 }
 
 
@@ -170,5 +182,6 @@ fun QuestionScreen(
 fun QuestionPreview() {
 
     QuestionScreen(navController = rememberNavController())
+    Timer(navController = rememberNavController())
 
 }

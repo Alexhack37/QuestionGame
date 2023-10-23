@@ -37,8 +37,8 @@ class CountDownTimerViewModel : ViewModel(){
                 //EndQuestion(showBox = true, 2) AQUIII
 
 
-                Log.d("tag","cambio")
-                navController.navigate(route = com.example.questiongame.Screen.Home.route)
+                //Log.d("tag","cambio")
+                //navController.navigate(route = com.example.questiongame.Screen.Home.route)
                 timerText.value = initialTotalTimeInMillis.timeFormat()
                 isPlaying.value = false
             }
