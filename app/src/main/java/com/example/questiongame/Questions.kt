@@ -196,13 +196,13 @@ fun QuestionScreen(
             Option("c) Todd Hockney", false),
             Option("d) Michael McManus", false)
         )),
-        Question("En la película 'La Naranja Mecanica', el personaje principal, Alex DeLarge, es un amante de la música clásica. ¿Quién es su compositor favorito?", listOf(
+        Question("En la película 'La Naranja Mecanica', el personaje principal es un amante de la música clásica. ¿Quién es su compositor favorito?", listOf(
             Option("a) Beethoven", false),
             Option("b) Mozart", true),
             Option("c) Bach", false),
             Option("d) Chopin", false)
         )),
-        Question("En la película 'Memento', el protagonista Leonard Shelby no puede retener nuevos recuerdos. ¿Qué objeto usa para recordar información importante?", listOf(
+        Question("En la película 'Memento' ¿Qué objeto usa el protagonista para recordar información importante?", listOf(
             Option("a) Un diario", false),
             Option("b) Tatuajes en su cuerpo", true),
             Option("c) Un reloj de pulsera especial", false),
@@ -226,7 +226,7 @@ fun QuestionScreen(
             Option("c) Oskar Schindler", true),
             Option("d) Joseph Goebbels", false)
         )),
-        Question("En la película 'The Godfather Part II', ¿qué actor interpreta al joven Vito Corleone en las escenas de flashback?", listOf(
+        Question("En la película 'The Godfather Part II', ¿qué actor interpreta al joven Vito Corleone?", listOf(
             Option("a) Robert De Niro", true),
             Option("b) Al Pacino", false),
             Option("c) Marlon Brando", false),
@@ -274,7 +274,7 @@ fun QuestionScreen(
             Option("c) Truman Burbank", false),
             Option("d) Ron Burgundy", false)
         )),
-        Question("En la película 'The Shape of Water', ¿quién interpreta a la limpiadora de un laboratorio de alta seguridad que se enamora de una criatura acuática?", listOf(
+        Question("En la película 'La forma del agua', ¿quién interpreta a la limpiadora que se enamora de una criatura acuática?", listOf(
             Option("a) Sally Hawkins", true),
             Option("b) Cate Blanchett", false),
             Option("c) Frances McDormand", false),

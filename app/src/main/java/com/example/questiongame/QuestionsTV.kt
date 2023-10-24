@@ -176,7 +176,7 @@ fun QuestionScreenTV(
             Option("c) Pete Campbell", false),
             Option("d) Joan Holloway", false)
         )),
-        Question("En 'Mr. Robot', ¿cuál es el nombre del personaje interpretado por Rami Malek, un joven programador que se convierte en un hacker revolucionario?", listOf(
+        Question("En 'Mr. Robot', ¿cuál es el nombre del personaje interpretado por Rami Malek?", listOf(
             Option("a) Elliot Alderson", true),
             Option("b) Tyler Durden", false),
             Option("c) Tyrell Wellick", false),
@@ -206,7 +206,7 @@ fun QuestionScreenTV(
             Option("c) El Ciclo de la Paradoja", false),
             Option("d) El Ciclo del Tiempo", true)
         )),
-        Question("En 'Mindhunter', ¿cuál es el nombre del agente del FBI interpretado por Jonathan Groff que se especializa en psicología criminal?", listOf(
+        Question("En 'Mindhunter', ¿cuál es el nombre del agente del FBI que se especializa en psicología criminal?", listOf(
             Option("a) Holden Ford", true),
             Option("b) Bill Tench", false),
             Option("c) Wendy Carr", false),
@@ -248,13 +248,13 @@ fun QuestionScreenTV(
             Option("c) Jerry Brudos", false),
             Option("d) Edmund Kemper", true)
         )),
-        Question("En 'The Handmaid's Tale', ¿cuál es el nombre del comandante interpretado por Joseph Fiennes, quien está casado con Serena Joy?", listOf(
+        Question("En 'The Handmaid's Tale', ¿cuál es el nombre del comandante interpretado, quien está casado con Serena Joy?", listOf(
             Option("a) Comandante Waterford", true),
             Option("b) Comandante Lawrence", false),
             Option("c) Comandante Winslow", false),
             Option("d) Comandante Blaine", false)
         )),
-        Question("En 'Doctor Who', ¿cuál es el nombre de la raza de extraterrestres que son enemigos recurrentes del Doctor y están encerrados en armaduras de metal?", listOf(
+        Question("En 'Doctor Who', ¿cuál es el nombre de la raza  que son enemigos recurrentes del Doctor y están encerrados en armaduras de metal?", listOf(
             Option("a) Time Lords", false),
             Option("b) Silurians", false),
             Option("c) Weeping Angels", false),

@@ -103,7 +103,7 @@ fun QuestionScreenBooks(
             Option("c) Matar un ruiseñor", false),
             Option("d) Mujercitas", false)
         )),
-        Question("¿Quién escribió 'Matar un ruiseñor', una novela que aborda temas de raza y justicia en el sur de Estados Unidos?", listOf(
+        Question("¿Quién escribió 'Matar un ruiseñor'?", listOf(
             Option("a) Charles Dickens", false),
             Option("b) Harper Lee", true),
             Option("c) F. Scott Fitzgerald", false),
@@ -115,25 +115,25 @@ fun QuestionScreenBooks(
             Option("c) El Hobbit", false),
             Option("d) Veinte mil leguas de viaje submarino", false)
         )),
-        Question("¿Quién escribió 'Los pilares de la Tierra', una novela histórica ambientada en la Edad Media?", listOf(
+        Question("¿Quién escribió 'Los pilares de la Tierra'?", listOf(
             Option("a) Ken Follett", true),
             Option("b) George R.R. Martin", false),
             Option("c) J.K. Rowling", false),
             Option("d) Dan Brown", false)
         )),
-        Question("¿Quién es el autor de 'La Odisea', una epopeya clásica griega que narra el regreso de Ulises a Ítaca?", listOf(
+        Question("¿Quién es el autor de 'La Odisea'?", listOf(
             Option("a) Homero", true),
             Option("b) Sófocles", false),
             Option("c) Esquilo", false),
             Option("d) Aristóteles", false)
         )),
-        Question("¿Quién escribió 'El Gran Gatsby', una novela que critica la sociedad estadounidense en la década de 1920?", listOf(
+        Question("¿Quién escribió 'El Gran Gatsby'?", listOf(
             Option("a) Ernest Hemingway", false),
             Option("b) F. Scott Fitzgerald", true),
             Option("c) John Steinbeck", false),
             Option("d) Mark Twain", false)
         )),
-        Question("¿Quién escribió 'Don Quijote de la Mancha', una de las obras más influyentes de la literatura española?", listOf(
+        Question("¿Quién escribió 'Don Quijote de la Mancha'?", listOf(
             Option("a) Miguel de Cervantes", true),
             Option("b) Gabriel García Márquez", false),
             Option("c) Jorge Luis Borges", false),
@@ -157,7 +157,7 @@ fun QuestionScreenBooks(
             Option("c) Gabriel García Márquez", true),
             Option("d) Mario Vargas Llosa", false)
         )),
-        Question("¿Cuál es el título de la primera novela de la saga 'Canción de Hielo y Fuego' de George R.R. Martin?", listOf(
+        Question("¿Cuál es el título de la primera novela de la saga 'Canción de Hielo y Fuego'?", listOf(
             Option("a) 'Choque de Reyes'", false),
             Option("b) 'Juego de Tronos'", true),
             Option("c) 'Tormenta de Espadas'", false),
@@ -181,13 +181,13 @@ fun QuestionScreenBooks(
             Option("c) 'Grandes Esperanzas'", false),
             Option("d) 'David Copperfield'", false)
         )),
-        Question("¿Quién es el autor de 'Los juegos del hambre', una serie de novelas distópicas?", listOf(
+        Question("¿Quién es el autor de 'Los juegos del hambre'?", listOf(
             Option("a) Veronica Roth", false),
             Option("b) Suzanne Collins", true),
             Option("c) J.K. Rowling", false),
             Option("d) Stephenie Meyer", false)
         )),
-        Question("¿Cuál es el autor de 'En busca del tiempo perdido', una serie de novelas que es considerada una obra maestra de la literatura francesa?", listOf(
+        Question("¿Cuál es el autor de 'En busca del tiempo perdido'?", listOf(
             Option("a) Marcel Proust", true),
             Option("b) Victor Hugo", false),
             Option("c) Gustave Flaubert", false),
@@ -217,7 +217,7 @@ fun QuestionScreenBooks(
             Option("c) 'El amor en los tiempos del cólera'", true),
             Option("d) 'La hojarasca'", false)
         )),
-        Question("¿Qué autor ruso escribió 'Guerra y paz', una novela histórica que narra la vida de varios personajes durante las guerras napoleónicas?", listOf(
+        Question("¿Qué autor ruso escribió 'Guerra y paz'?", listOf(
             Option("a) Fyodor Dostoevsky", false),
             Option("b) Anton Chekhov", false),
             Option("c) Leo Tolstoy", true),
@@ -235,13 +235,13 @@ fun QuestionScreenBooks(
             Option("c) 'El cuento de la criada'", true),
             Option("d) 'Gilead'", false)
         )),
-        Question("¿Quién escribió 'Crónica de una muerte anunciada', una novela que relata el asesinato de Santiago Nasar?", listOf(
+        Question("¿Quién escribió 'Crónica de una muerte anunciada'?", listOf(
             Option("a) Mario Vargas Llosa", false),
             Option("b) Julio Cortázar", false),
-            Option("c) Gabriel García Márquez", false),
+            Option("c) Gabriel García Márquez", true),
             Option("d) Toni Morrison", false)
         )),
-        Question("¿Quién es el autor de 'En el camino', una novela que se considera un hito en la literatura beatnik y que narra los viajes de Sal Paradise y Dean Moriarty por los Estados Unidos?", listOf(
+        Question("¿Quién es el autor de 'En el camino'?", listOf(
             Option("a) Jack Kerouac", true),
             Option("b) Allen Ginsberg", false),
             Option("c) William S. Burroughs", false),
@@ -265,7 +265,7 @@ fun QuestionScreenBooks(
             Option("c) 'Islas a la deriva'", false),
             Option("d) 'La carretera'", false)
         )),
-        Question("¿Quién es el autor de 'La carretera', una novela postapocalíptica que narra el viaje de un padre y su hijo en un mundo devastado?", listOf(
+        Question("¿Quién es el autor de 'La carretera', novela que narra el viaje de un padre y su hijo en un mundo devastado?", listOf(
             Option("a) Cormac McCarthy", true),
             Option("b) Stephen King", false),
             Option("c) Margaret Atwood", false),
@@ -277,7 +277,7 @@ fun QuestionScreenBooks(
             Option("c) 'Guerra y paz'", true),
             Option("d) 'Resurrección'", false)
         )),
-        Question("¿Quién es el autor de la novela 'Bajo el volcán', una obra maestra de la literatura que se desarrolla en México durante el Día de los Muertos?", listOf(
+        Question("¿Quién es el autor de la novela 'Bajo el volcán'?", listOf(
             Option("a) Ernest Hemingway", false),
             Option("b) F. Scott Fitzgerald", false),
             Option("c) Malcolm Lowry", true),
@@ -289,13 +289,13 @@ fun QuestionScreenBooks(
             Option("c) 'El arco iris de la gravedad'", true),
             Option("d) 'Mason & Dixon'", false)
         )),
-        Question("¿Quién escribió 'Cumbres Borrascosas', una novela gótica que narra una historia de amor intensa y trágica en la campiña inglesa?", listOf(
+        Question("¿Quién escribió 'Cumbres Borrascosas'?", listOf(
             Option("a) Jane Austen", false),
             Option("b) Charlotte Brontë", false),
             Option("c) Emily Brontë", true),
             Option("d) Anne Brontë", false)
         )),
-        Question("¿Cuál es el título de la novela de Herman Melville que narra la obsesión del capitán Ahab por vengarse de la ballena blanca Moby-Dick?", listOf(
+        Question("¿Cuál es el título de la novela de Herman Melville que narra la obsesión del capitán Ahab por una ballena?", listOf(
             Option("a) 'La isla del tesoro'", false),
             Option("b) 'Veinte mil leguas de viaje submarino'", false),
             Option("c) 'Moby-Dick'", true),
