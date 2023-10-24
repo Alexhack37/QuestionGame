@@ -1,6 +1,7 @@
 package com.example.questiongame
 
 import android.graphics.BitmapFactory.Options
+import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -47,7 +48,7 @@ var reset =0
 var random=Random.nextInt(0,40)
 var cont=0
 val visit= mutableListOf<Int>()
-
+val videoUri = Uri.parse("android.resource://com.example.questiongame/raw/resplandor")
 @Composable
 fun Timer(
     viewModel: CountDownTimerViewModel = viewModel(),
@@ -328,6 +329,12 @@ fun QuestionScreen(
             Option("b) Miles Teller", false),
             Option("c) Ethan Hawke", false),
             Option("d) Paul Reiser", false)
+        )),
+                        Question("A que pelicula pertenece esta escena?", listOf(
+            Option("a) Fast and Furiuos", false),
+            Option("b) Five Nights at Freddys", false),
+            Option("c) Jumanji", false),
+            Option("d) El resplandor", true)
         ))
 
 
@@ -356,6 +363,9 @@ fun QuestionScreen(
         ) {
         if (cont< 10) {
             val question = questions[random]
+            if (question == questions.get(questions.size -1)){
+                VideoPlayer(videoUri = videoUri)
+            }
             Box(){
                 Text(text = question.text,
                     fontWeight = FontWeight.Bold,
@@ -363,14 +373,20 @@ fun QuestionScreen(
                     textAlign = TextAlign.Center
                 )
             }
+            
+            //VideoPlayer(videoUri = videoUri)
+
 
 
             Spacer(modifier = Modifier.height(16.dp))
             question.options.forEach { option ->
+
+                // obtener tamaño de una lista
+
                 Text(
                     text = option.text,
                     style = MaterialTheme.typography.bodyLarge,
-                    fontSize = 20.sp,
+                    fontSize = 15.sp,
                     letterSpacing = MaterialTheme.typography.titleLarge.letterSpacing,
                     modifier = Modifier
                         .padding(start = 8.dp)
@@ -392,7 +408,8 @@ fun QuestionScreen(
                 RadioButton(
                     selected = option == selectedOption,
                     onClick = { selectedOption = option },
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier
+                        .fillMaxWidth()
                         .align(Alignment.CenterHorizontally)
                 )
 
@@ -440,7 +457,8 @@ fun QuestionScreen(
                 Text(
                     text = it,
                     fontSize = 50.sp,
-                    modifier = Modifier.padding(top = 16.dp)
+                    modifier = Modifier
+                        .padding(top = 16.dp)
                         .align(Alignment.CenterHorizontally)
                 )
             }
