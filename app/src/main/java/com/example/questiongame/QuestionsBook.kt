@@ -25,6 +25,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -152,29 +154,53 @@ fun QuestionScreenBooks(
 
     Column(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(2.dp),
-        verticalArrangement = Arrangement.Center
-    ) {
-        if (contBooks< 10) {
+            .padding(20.dp)
+            .offset(y = (90).dp),
+        verticalArrangement = Arrangement.Top,
+
+        ) {
+        if (contBooks < 10) {
             val question = questions[randomBooks]
             Box(){
-                Text(text = question.text, style = MaterialTheme.typography.bodySmall)
+                Text(text = question.text,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 30.sp,
+                    textAlign = TextAlign.Center
+                )
             }
+
 
             Spacer(modifier = Modifier.height(16.dp))
             question.options.forEach { option ->
+                Text(
+                    text = option.text,
+                    style = MaterialTheme.typography.bodyLarge,
+                    fontSize = 20.sp,
+                    letterSpacing = MaterialTheme.typography.titleLarge.letterSpacing,
+                    modifier = Modifier
+                        .padding(start = 8.dp)
+                        .clickable { selectedOptionBooks = option }
+                        .offset(y = (20).dp)
+                        .align(Alignment.CenterHorizontally)
+                )
+
+                Text(
+                    text = "",
+                    fontSize = 10.sp,
+                    modifier = Modifier
+                        .padding(start = 8.dp)
+                        .clickable { selectedOptionBooks = option }
+                        .offset(y = (1).dp)
+                        .align(Alignment.CenterHorizontally)
+                )
+
                 RadioButton(
                     selected = option == selectedOptionBooks,
                     onClick = { selectedOptionBooks = option },
                     modifier = Modifier.fillMaxWidth()
+                        .align(Alignment.CenterHorizontally)
                 )
-                Text(
-                    text = option.text,
-                    modifier = Modifier
-                        .padding(start = 8.dp)
-                        .clickable { selectedOptionBooks = option }
-                )
+
             }
             Spacer(modifier = Modifier.height(16.dp))
 

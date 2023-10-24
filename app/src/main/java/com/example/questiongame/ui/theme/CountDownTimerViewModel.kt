@@ -36,12 +36,12 @@ class CountDownTimerViewModel : ViewModel(){
                 timeLeft.value = currentTimeLeft
                 restTime=timeLeft.value
             }
-            override fun onFinish(){
-                timerText.value = initialTotalTimeInMillis.timeFormat()
-                isPlaying.value = false
-                time +=1
-
-
+            override fun onFinish() {
+                //timerText.value = initialTotalTimeInMillis.timeFormat()
+                timerText.value = "SE ACABÓ"
+                stopCountDownTimer()
+                //navController.navigate(route = com.example.questiongame.Screen.PuntuationScreen.route)
+                //time += 1
             }
         }.start()
         if(time> 1){
