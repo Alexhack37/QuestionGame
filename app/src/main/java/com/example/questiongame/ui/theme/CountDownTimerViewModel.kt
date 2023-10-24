@@ -1,7 +1,6 @@
 package com.example.questiongame.ui.theme
 
 import android.os.CountDownTimer
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -15,7 +14,7 @@ class CountDownTimerViewModel : ViewModel(){
 
     private var countDownTimer: CountDownTimer? = null
 
-    private val userInputSecond = TimeUnit.SECONDS.toMillis(50)
+    private val userInputSecond = TimeUnit.SECONDS.toMillis(10)
 
     val initialTotalTimeInMillis = userInputSecond
     var timeLeft = mutableStateOf(initialTotalTimeInMillis)
@@ -27,7 +26,6 @@ class CountDownTimerViewModel : ViewModel(){
     var time = 0
 
 
-
     fun startCountDownTimer (navController: NavController) = viewModelScope.launch {
         isPlaying.value = true
         countDownTimer = object: CountDownTimer(timeLeft.value, countDownInterval){
@@ -36,18 +34,18 @@ class CountDownTimerViewModel : ViewModel(){
                 timeLeft.value = currentTimeLeft
                 restTime=timeLeft.value
             }
-            override fun onFinish(){
-                timerText.value = initialTotalTimeInMillis.timeFormat()
-                isPlaying.value = false
-                time +=1
-
-
+            override fun onFinish() {
+                //timerText.value = initialTotalTimeInMillis.timeFormat()
+                timerText.value = "SE ACABÓ"
+                stopCountDownTimer()
+                //navController.navigate(route = com.example.questiongame.Screen.PuntuationScreen.route)
+                //time += 1
             }
         }.start()
-        if(time> 1){
+        /*if(time>= 1){
             navController.navigate(route = com.example.questiongame.Screen.PuntuationScreen.route)
             time =0
-        }
+        }*/
     }
 
     fun stopCountDownTimer() = viewModelScope.launch {
