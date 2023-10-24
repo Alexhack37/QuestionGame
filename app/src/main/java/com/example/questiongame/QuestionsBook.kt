@@ -132,7 +132,176 @@ fun QuestionScreenBooks(
             Option("b) F. Scott Fitzgerald", true),
             Option("c) John Steinbeck", false),
             Option("d) Mark Twain", false)
+        )),
+        Question("¿Quién escribió 'Don Quijote de la Mancha', una de las obras más influyentes de la literatura española?", listOf(
+            Option("a) Miguel de Cervantes", true),
+            Option("b) Gabriel García Márquez", false),
+            Option("c) Jorge Luis Borges", false),
+            Option("d) William Shakespeare", false)
+        )),
+        Question("¿Qué novela distópica de Ray Bradbury trata sobre la quema de libros y la censura?", listOf(
+            Option("a) '1984'", false),
+            Option("b) 'Un Mundo Feliz'", false),
+            Option("c) 'Fahrenheit 451'", true),
+            Option("d) '1984'", false)
+        )),
+        Question("¿Quién es el autor de la serie de libros 'Cazadores de Sombras'?", listOf(
+            Option("a) J.K. Rowling", false),
+            Option("b) Cassandra Clare", true),
+            Option("c) J.R.R. Tolkien", false),
+            Option("d) George R.R. Martin", false)
+        )),
+        Question("¿Qué autor escribió 'Cien años de soledad', una obra clave del realismo mágico?", listOf(
+            Option("a) Julio Cortázar", false),
+            Option("b) Jorge Luis Borges", false),
+            Option("c) Gabriel García Márquez", true),
+            Option("d) Mario Vargas Llosa", false)
+        )),
+        Question("¿Cuál es el título de la primera novela de la saga 'Canción de Hielo y Fuego' de George R.R. Martin?", listOf(
+            Option("a) 'Choque de Reyes'", false),
+            Option("b) 'Juego de Tronos'", true),
+            Option("c) 'Tormenta de Espadas'", false),
+            Option("d) 'Festín de Cuervos'", false)
+        )),
+        Question("¿Quién escribió 'El Hobbit', una novela que se sitúa en la Tierra Media y precede a 'El Señor de los Anillos'?", listOf(
+            Option("a) C.S. Lewis", false),
+            Option("b) J.K. Rowling", false),
+            Option("c) J.R.R. Tolkien", true),
+            Option("d) George R.R. Martin", false)
+        )),
+        Question("¿Cuál es el título del primer libro de la serie 'Crepúsculo' de Stephenie Meyer?", listOf(
+            Option("a) 'Crepúsculo'", true),
+            Option("b) 'Eclipse'", false),
+            Option("c) 'Amanecer'", false),
+            Option("d) 'Luna Nueva'", false)
+        )),
+        Question("¿Qué novela de Charles Dickens cuenta la historia de Ebenezer Scrooge y su transformación en la víspera de Navidad?", listOf(
+            Option("a) 'Oliver Twist'", false),
+            Option("b) 'Cuento de Navidad'", true),
+            Option("c) 'Grandes Esperanzas'", false),
+            Option("d) 'David Copperfield'", false)
+        )),
+        Question("¿Quién es el autor de 'Los juegos del hambre', una serie de novelas distópicas?", listOf(
+            Option("a) Veronica Roth", false),
+            Option("b) Suzanne Collins", true),
+            Option("c) J.K. Rowling", false),
+            Option("d) Stephenie Meyer", false)
+        )),
+        Question("¿Cuál es el autor de 'En busca del tiempo perdido', una serie de novelas que es considerada una obra maestra de la literatura francesa?", listOf(
+            Option("a) Marcel Proust", true),
+            Option("b) Victor Hugo", false),
+            Option("c) Gustave Flaubert", false),
+            Option("d) Albert Camus", false)
+        )),
+        Question("¿Qué novela de Fyodor Dostoevsky trata sobre el asesinato de un anciano usurero y las consecuencias psicológicas para el protagonista?", listOf(
+            Option("a) 'Crimen y castigo'", true),
+            Option("b) 'Los hermanos Karamazov'", false),
+            Option("c) 'El idiota'", false),
+            Option("d) 'Anna Karénina'", false)
+        )),
+        Question("¿Cuál es la obra épica que narra la historia de Odiseo y su largo viaje de regreso a casa después de la Guerra de Troya?", listOf(
+            Option("a) 'La Eneida'", false),
+            Option("b) 'La Ilíada'", false),
+            Option("c) 'La Odisea'", true),
+            Option("d) 'Antígona'", false)
+        )),
+        Question("¿Qué novela distópica de Aldous Huxley presenta un mundo en el que la sociedad es controlada por el consumo de una droga llamada Soma?", listOf(
+            Option("a) '1984'", false),
+            Option("b) 'Un Mundo Feliz'", true),
+            Option("c) 'Fahrenheit 451'", false),
+            Option("d) 'Nosotros'", false)
+        )),
+        Question("¿Cuál es la novela ganadora del Premio Pulitzer en 1982 escrita por Gabriel García Márquez?", listOf(
+            Option("a) 'Cien años de soledad'", false),
+            Option("b) 'Crónica de una muerte anunciada'", false),
+            Option("c) 'El amor en los tiempos del cólera'", true),
+            Option("d) 'La hojarasca'", false)
+        )),
+        Question("¿Qué autor ruso escribió 'Guerra y paz', una novela histórica que narra la vida de varios personajes durante las guerras napoleónicas?", listOf(
+            Option("a) Fyodor Dostoevsky", false),
+            Option("b) Anton Chekhov", false),
+            Option("c) Leo Tolstoy", true),
+            Option("d) Ivan Turgenev", false)
+        )),
+        Question("¿Cuál es la obra de Miguel de Cervantes que narra las aventuras de Don Quijote y Sancho Panza?", listOf(
+            Option("a) 'La Celestina'", false),
+            Option("b) 'La vida es sueño'", false),
+            Option("c) 'Don Quijote de la Mancha'", true),
+            Option("d) 'Fuenteovejuna'", false)
+        )),
+        Question("¿Qué novela de Margaret Atwood presenta un futuro distópico en el que las mujeres son subyugadas y la fertilidad es escasa?", listOf(
+            Option("a) 'Alias Grace'", false),
+            Option("b) 'La historia de Agua', una novela que aborda temas de raza y justicia en el sur de Estados Unidos?", false),
+            Option("c) 'El cuento de la criada'", true),
+            Option("d) 'Gilead'", false)
+        )),
+        Question("¿Quién escribió 'Crónica de una muerte anunciada', una novela que relata el asesinato de Santiago Nasar?", listOf(
+            Option("a) Mario Vargas Llosa", false),
+            Option("b) Julio Cortázar", false),
+            Option("c) Gabriel García Márquez", false),
+            Option("d) Toni Morrison", false)
+        )),
+        Question("¿Quién es el autor de 'En el camino', una novela que se considera un hito en la literatura beatnik y que narra los viajes de Sal Paradise y Dean Moriarty por los Estados Unidos?", listOf(
+            Option("a) Jack Kerouac", true),
+            Option("b) Allen Ginsberg", false),
+            Option("c) William S. Burroughs", false),
+            Option("d) Neal Cassady", false)
+        )),
+        Question("¿Cuál es el título de la novela de Salman Rushdie que provocó una controversia internacional debido a su representación de figuras religiosas?", listOf(
+            Option("a) 'Los hijos de la medianoche'", true),
+            Option("b) 'Shalimar el payaso'", false),
+            Option("c) 'El suelo bajo sus pies'", false),
+            Option("d) 'Furia'", false)
+        )),
+        Question("¿Quién escribió 'La broma infinita', una novela posmoderna conocida por su longitud y complejidad?", listOf(
+            Option("a) David Foster Wallace", true),
+            Option("b) Thomas Pynchon", false),
+            Option("c) Don DeLillo", false),
+            Option("d) Jonathan Franzen", false)
+        )),
+        Question("¿Cuál es el título de la novela de Aldous Huxley que imagina un futuro distópico en el que la sociedad está dominada por el uso de drogas y la tecnología?", listOf(
+            Option("a) 'Un Mundo Feliz'", true),
+            Option("b) 'El fin de la eternidad'", false),
+            Option("c) 'Islas a la deriva'", false),
+            Option("d) 'La carretera'", false)
+        )),
+        Question("¿Quién es el autor de 'La carretera', una novela postapocalíptica que narra el viaje de un padre y su hijo en un mundo devastado?", listOf(
+            Option("a) Cormac McCarthy", true),
+            Option("b) Stephen King", false),
+            Option("c) Margaret Atwood", false),
+            Option("d) Kazuo Ishiguro", false)
+        )),
+        Question("¿Cuál es el título de la novela de Leo Tolstoy que narra la historia de la alta sociedad rusa durante la invasión napoleónica?", listOf(
+            Option("a) 'La Guerra y la Paz'", false),
+            Option("b) 'Anna Karenina'", false),
+            Option("c) 'Guerra y paz'", true),
+            Option("d) 'Resurrección'", false)
+        )),
+        Question("¿Quién es el autor de la novela 'Bajo el volcán', una obra maestra de la literatura que se desarrolla en México durante el Día de los Muertos?", listOf(
+            Option("a) Ernest Hemingway", false),
+            Option("b) F. Scott Fitzgerald", false),
+            Option("c) Malcolm Lowry", true),
+            Option("d) John Steinbeck", false)
+        )),
+        Question("¿Cuál es el título de la novela de Thomas Pynchon que se desarrolla en la década de 1960 y trata sobre paranoia, conspiraciones y la Guerra Fría?", listOf(
+            Option("a) 'Inherent Vice'", false),
+            Option("b) 'V.'", false),
+            Option("c) 'El arco iris de la gravedad'", true),
+            Option("d) 'Mason & Dixon'", false)
+        )),
+        Question("¿Quién escribió 'Cumbres Borrascosas', una novela gótica que narra una historia de amor intensa y trágica en la campiña inglesa?", listOf(
+            Option("a) Jane Austen", false),
+            Option("b) Charlotte Brontë", false),
+            Option("c) Emily Brontë", true),
+            Option("d) Anne Brontë", false)
+        )),
+        Question("¿Cuál es el título de la novela de Herman Melville que narra la obsesión del capitán Ahab por vengarse de la ballena blanca Moby-Dick?", listOf(
+            Option("a) 'La isla del tesoro'", false),
+            Option("b) 'Veinte mil leguas de viaje submarino'", false),
+            Option("c) 'Moby-Dick'", true),
+            Option("d) 'Robinson Crusoe'", false)
         ))
+
 
 
 
@@ -219,9 +388,9 @@ fun QuestionScreenBooks(
                             // La opción seleccionada es incorrecta, puedes mostrar un mensaje de "Incorrecto".
                         }
                         visitBooks.add(randomBooks)
-                        randomBooks= Random.nextInt(0,10)
+                        randomBooks= Random.nextInt(0,36)
                         while(visit.contains(randomBooks)){
-                            randomBooks= Random.nextInt(0,10)
+                            randomBooks= Random.nextInt(0,36)
                         }
 
                         reset = 1
