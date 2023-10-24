@@ -14,7 +14,7 @@ class CountDownTimerViewModel : ViewModel(){
 
     private var countDownTimer: CountDownTimer? = null
 
-    private val userInputSecond = TimeUnit.SECONDS.toMillis(50)
+    private val userInputSecond = TimeUnit.SECONDS.toMillis(75)
 
     val initialTotalTimeInMillis = userInputSecond
     var timeLeft = mutableStateOf(initialTotalTimeInMillis)
