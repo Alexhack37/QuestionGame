@@ -42,7 +42,7 @@ data class QuestionBooks(val text: String, val options: List<Option>)
 
 
 val visitBooks= mutableListOf<Int>()
-var randomBooks=Random.nextInt(0,11)
+var randomBooks=Random.nextInt(0,36)
 var contBooks=0
 
 @Composable
