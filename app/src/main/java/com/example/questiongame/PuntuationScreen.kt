@@ -35,7 +35,15 @@ fun PuntuationScreen(
     navController: NavController
     ) {
     Column {
-        Button(onClick = { navController.navigate(route = Screen.Home.route) }) {
+        Button(onClick = {
+            total=0
+            cont=0
+            contBooks=0
+            contSeries=0
+            visit.clear()
+            visitBooks.clear()
+            visitTV.clear()
+            navController.navigate(route = Screen.Home.route) }) {
             Icon(
                 Icons.Default.Home,
                 contentDescription = null
