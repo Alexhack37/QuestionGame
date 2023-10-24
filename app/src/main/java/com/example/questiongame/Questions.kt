@@ -20,6 +20,7 @@ import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -32,6 +33,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.questiongame.ui.theme.CountDownTimerViewModel
+import kotlin.random.Random
 
 data class Option(val text: String, val isCorrect: Boolean)
 
@@ -40,6 +42,9 @@ data class Question(val text: String, val options: List<Option>)
 
 var total =0
 var reset =0
+var random=0
+var cont=0
+val visit= mutableListOf<Int>()
 
 @Composable
 fun Timer(
@@ -134,6 +139,12 @@ fun QuestionScreen(
             Option("b) Scarlett Johansson", false),
             Option("c) Jennifer Lawrence", true),
             Option("d) Anne Hathaway", false)
+        )),
+        Question("¿Quién interpreta a Neo en la película 'The Matrix'?", listOf(
+            Option("a) Keanu Reeves", true),
+            Option("b) Laurence Fishburne", false),
+            Option("c) Hugo Weaving", false),
+            Option("d) Tom Hanks", false)
         ))
 
         // Agrega más preguntas aquí
@@ -158,8 +169,8 @@ fun QuestionScreen(
             .padding(2.dp),
         verticalArrangement = Arrangement.Center
     ) {
-        if (currentQuestion < questions.size) {
-            val question = questions[currentQuestion]
+        if (cont < 10) {
+            val question = questions[random]
             Box(){
                 Text(text = question.text, style = MaterialTheme.typography.bodyLarge)
             }
@@ -197,8 +208,15 @@ fun QuestionScreen(
                             total+=0
                             // La opción seleccionada es incorrecta, puedes mostrar un mensaje de "Incorrecto".
                         }
-                        currentQuestion++
+                        random= Random.nextInt(0,10)
+                        while(visit.contains(random)){
+                            random= Random.nextInt(0,10)
+                        }
+                        visit.add(random)
+
+
                         reset = 1
+                        cont+=1
                         selectedOption = null
                     }
                 },
