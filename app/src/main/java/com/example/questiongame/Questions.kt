@@ -412,7 +412,7 @@ fun QuestionScreen(
 
                         } else {
                             total+=0
-                            // La opción seleccionada es incorrecta, puedes mostrar un mensaje de "Incorrecto".
+
                         }
                         visit.add(random)
                         random= Random.nextInt(0,40)
@@ -447,6 +447,7 @@ fun QuestionScreen(
 
         } else {
             // Muestra un mensaje o pantalla de finalización
+
             navController.navigate(route = Screen.PuntuationScreen.route)
 
         }

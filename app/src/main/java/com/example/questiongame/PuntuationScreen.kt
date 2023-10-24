@@ -43,6 +43,7 @@ fun PuntuationScreen(
             visit.clear()
             visitBooks.clear()
             visitTV.clear()
+
             navController.navigate(route = Screen.Home.route) }) {
             Icon(
                 Icons.Default.Home,
@@ -86,13 +87,15 @@ fun PuntuationScreen(
         Button(onClick = {
 
             navController.navigate(route = Screen.Category.route)
-            total=0
-            cont=0
-            contBooks=0
-            contSeries=0
-            visit.clear()
-            visitBooks.clear()
-            visitTV.clear()
+            //total=0
+            //cont=0
+            //contBooks=0
+            //contSeries=0
+            //visit.clear()
+            //visitBooks.clear()
+            //visitTV.clear()
+            CountDownTimerViewModel().stopCountDownTimer()
+
         }, Modifier.padding(top = 450.dp)) {
             Text(
                 "VOLVER A JUGAR",

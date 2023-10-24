@@ -38,6 +38,7 @@ class CountDownTimerViewModel : ViewModel(){
                 //timerText.value = initialTotalTimeInMillis.timeFormat()
                 timerText.value = "SE ACABÓ"
                 stopCountDownTimer()
+
                 //navController.navigate(route = com.example.questiongame.Screen.PuntuationScreen.route)
                 //time += 1
             }

@@ -27,7 +27,15 @@ import androidx.navigation.compose.rememberNavController
 fun CategorySelector(
     modifier : Modifier = Modifier,
     navController: NavController
+
 ){
+    total=0
+    cont=0
+    contBooks=0
+    contSeries=0
+    visit.clear()
+    visitBooks.clear()
+    visitTV.clear()
     Button(onClick = { navController.navigate(route = Screen.Home.route) }) {
         Icon(
             Icons.Default.Home,
