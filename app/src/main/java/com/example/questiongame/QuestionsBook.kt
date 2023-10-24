@@ -229,9 +229,9 @@ fun QuestionScreenBooks(
             Option("c) 'Don Quijote de la Mancha'", true),
             Option("d) 'Fuenteovejuna'", false)
         )),
-        Question("¿Qué novela de Margaret Atwood presenta un futuro distópico en el que las mujeres son subyugadas y la fertilidad es escasa?", listOf(
+        Question("¿Qué novela de Margaret Atwood presenta un futuro distópico en el que la fertilidad es escasa?", listOf(
             Option("a) 'Alias Grace'", false),
-            Option("b) 'La historia de Agua', una novela que aborda temas de raza y justicia en el sur de Estados Unidos?", false),
+            Option("b) 'La historia de Agua'?", false),
             Option("c) 'El cuento de la criada'", true),
             Option("d) 'Gilead'", false)
         )),
