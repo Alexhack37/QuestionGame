@@ -80,6 +80,8 @@ fun PuntuationScreen(
             navController.navigate(route = Screen.Category.route)
             total=0
             cont=0
+            contBooks=0
+            contSeries=0
             visit.clear()
             visitBooks.clear()
             visitTV.clear()

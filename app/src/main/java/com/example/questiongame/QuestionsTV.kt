@@ -286,7 +286,7 @@ fun QuestionScreenTV(
         verticalArrangement = Arrangement.Top,
 
         ) {
-        if (contSeries < questions.size) {
+        if (contSeries < 10) {
             val question = questions[randomSeries]
             Box(){
                 Text(text = question.text,
