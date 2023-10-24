@@ -44,7 +44,7 @@ data class Question(val text: String, val options: List<Option>)
 
 var total =0
 var reset =0
-var random=Random.nextInt(0,11)
+var random=Random.nextInt(0,40)
 var cont=0
 val visit= mutableListOf<Int>()
 
@@ -153,9 +153,185 @@ fun QuestionScreen(
             Option("b) Friday the 13th", false),
             Option("c) Halloween", true),
             Option("d) The Exorcist", false)
+        )),
+        Question("En la película 'The Shining', ¿quién interpreta al escritor Jack Torrance?", listOf(
+            Option("a) Jack Nicholson", true),
+            Option("b) Al Pacino", false),
+            Option("c) Marlon Brando", false),
+            Option("d) Robert De Niro", false)
+        )),
+        Question("En la película 'E.T. the Extra-Terrestrial', ¿quién es el director de la película?", listOf(
+            Option("a) George Lucas", false),
+            Option("b) James Cameron", false),
+            Option("c) Steven Spielberg", true),
+            Option("d) Christopher Nolan", false)
+        )),
+        Question("En la película 'The Dark Knight', ¿cuál es el nombre del personaje interpretado por Heath Ledger?", listOf(
+            Option("a) Two-Face", false),
+            Option("b) The Riddler", false),
+            Option("c) The Joker", true),
+            Option("d) Scarecrow", false)
+        )),
+        Question("En la película 'Forrest Gump', ¿qué actor interpreta a Forrest Gump?", listOf(
+            Option("a) Tom Hanks", true),
+            Option("b) Robert De Niro", false),
+            Option("c) Brad Pitt", false),
+            Option("d) Johnny Depp", false)
+        )),
+        Question("En la película 'No Country for Old Men', ¿cuál es el nombre del asesino interpretado por Javier Bardem que utiliza una pistola de perno neumático?", listOf(
+            Option("a) Anton Chigurh", true),
+            Option("b) Llewelyn Moss", false),
+            Option("c) Ed Tom Bell", false),
+            Option("d) Carson Wells", false)
+        )),
+        Question("En la película 'Una mente maravillosa', ¿quién interpreta al matemático John Nash, quien sufre de esquizofrenia?", listOf(
+            Option("a) Russell Crowe", true),
+            Option("b) Sean Connery", false),
+            Option("c) Anthony Hopkins", false),
+            Option("d) Tom Hanks", false)
+        )),
+        Question("En la película 'The Usual Suspects', ¿quién es el misterioso narrador de la historia, también conocido como Keyser Söze?", listOf(
+            Option("a) Verbal Kint", true),
+            Option("b) Dean Keaton", false),
+            Option("c) Todd Hockney", false),
+            Option("d) Michael McManus", false)
+        )),
+        Question("En la película 'A Clockwork Orange', el personaje principal, Alex DeLarge, es un amante de la música clásica. ¿Quién es su compositor favorito?", listOf(
+            Option("a) Beethoven", false),
+            Option("b) Mozart", true),
+            Option("c) Bach", false),
+            Option("d) Chopin", false)
+        )),
+        Question("En la película 'Memento', el protagonista Leonard Shelby sufre de una condición médica que le impide retener nuevos recuerdos a corto plazo. ¿Qué objeto usa para recordar información importante?", listOf(
+            Option("a) Un diario", false),
+            Option("b) Tatuajes en su cuerpo", true),
+            Option("c) Un reloj de pulsera especial", false),
+            Option("d) Fotografías", false)
+        )),
+        Question("En la película 'Apocalypse Now', ¿cuál es el nombre del coronel interpretado por Marlon Brando?", listOf(
+            Option("a) Coronel Johnson", false),
+            Option("b) Coronel Smith", false),
+            Option("c) Coronel Kurtz", true),
+            Option("d) Coronel Parker", false)
+        )),
+        Question("En la película 'Citizen Kane', ¿cuál es el significado de la palabra 'Rosebud' que se convierte en el enigma central de la trama?", listOf(
+            Option("a) El nombre de la amante de Charles Foster Kane", false),
+            Option("b) El nombre de la madre de Charles Foster Kane", false),
+            Option("c) El trineo de la infancia de Charles Foster Kane", true),
+            Option("d) El apodo de Charles Foster Kane en la escuela", false)
+        )),
+        Question("En la película 'Schindler's List', ¿cuál es el nombre del empresario alemán que salva a judíos durante el Holocausto?", listOf(
+            Option("a) Adolf Hitler", false),
+            Option("b) Heinrich Himmler", false),
+            Option("c) Oskar Schindler", true),
+            Option("d) Joseph Goebbels", false)
+        )),
+        Question("En la película 'The Godfather Part II', ¿qué actor interpreta al joven Vito Corleone en las escenas de flashback?", listOf(
+            Option("a) Robert De Niro", true),
+            Option("b) Al Pacino", false),
+            Option("c) Marlon Brando", false),
+            Option("d) Joe Pesci", false)
+        )),
+        Question("En la película 'La La Land', ¿qué instrumento musical toca el personaje de Ryan Gosling?", listOf(
+            Option("a) Piano", true),
+            Option("b) Violín", false),
+            Option("c) Guitarra", false),
+            Option("d) Trompeta", false)
+        )),
+        Question("En la película 'A Streetcar Named Desire', ¿quién interpreta el icónico papel de Blanche DuBois?", listOf(
+            Option("a) Meryl Streep", false),
+            Option("b) Bette Davis", false),
+            Option("c) Vivien Leigh", true),
+            Option("d) Katharine Hepburn", false)
+        )),
+        Question("En la película 'The Truman Show', ¿quién interpreta al personaje principal, Truman Burbank?", listOf(
+            Option("a) Jim Carrey", true),
+            Option("b) Tom Hanks", false),
+            Option("c) Will Ferrell", false),
+            Option("d) Robin Williams", false)
+        )),
+        Question("En la película 'El Gran Hotel Budapest', ¿quién interpreta al conserje Gustave H.?", listOf(
+            Option("a) Ralph Fiennes", true),
+            Option("b) Jude Law", false),
+            Option("c) Bill Murray", false),
+            Option("d) Daniel Day-Lewis", false)
+        )),
+        Question("En la película 'El laberinto del fauno', ¿quién es el director mexicano conocido por su estilo oscuro y fantástico?", listOf(
+            Option("a) Alfonso Cuarón", false),
+            Option("b) Guillermo del Toro", true),
+            Option("c) Alejandro González Iñárritu", false),
+            Option("d) Pedro Almodóvar", false)
+        )),
+        Question("En la película 'El renacido', ¿quién interpreta al trampero Hugh Glass?", listOf(
+            Option("a) Tom Hardy", false),
+            Option("b) Leonardo DiCaprio", true),
+            Option("c) Christian Bale", false),
+            Option("d) Matthew McConaughey", false)
+        )),
+        Question("En la película 'Birdman', ¿cuál es el nombre del personaje que intenta revitalizar su carrera como actor en Broadway?", listOf(
+            Option("a) Riggan Thomson", true),
+            Option("b) Jack Sparrow", false),
+            Option("c) Truman Burbank", false),
+            Option("d) Ron Burgundy", false)
+        )),
+        Question("En la película 'The Shape of Water', ¿quién interpreta a la limpiadora de un laboratorio de alta seguridad que se enamora de una criatura acuática?", listOf(
+            Option("a) Sally Hawkins", true),
+            Option("b) Cate Blanchett", false),
+            Option("c) Frances McDormand", false),
+            Option("d) Michelle Williams", false)
+        )),
+        Question("En la película 'Drive', ¿quién interpreta al protagonista, un conductor de autos y especialista en cine que se involucra en un mundo criminal?", listOf(
+            Option("a) Ryan Gosling", true),
+            Option("b) Jason Statham", false),
+            Option("c) Keanu Reeves", false),
+            Option("d) Tom Hardy", false)
+        )),
+        Question("En la película 'Lost in Translation', ¿quién interpreta a una joven que forma un vínculo especial con un actor en un hotel de Tokio?", listOf(
+            Option("a) Scarlett Johansson", true),
+            Option("b) Keira Knightley", false),
+            Option("c) Natalie Portman", false),
+            Option("d) Emma Stone", false)
+        )),
+        Question("En la película 'Requiem por un sueño', ¿quién interpreta el papel de la madre adicta Sara Goldfarb?", listOf(
+            Option("a) Ellen Burstyn", true),
+            Option("b) Meryl Streep", false),
+            Option("c) Glenn Close", false),
+            Option("d) Cate Blanchett", false)
+        )),
+        Question("En la película 'Oldboy', ¿quién es el director surcoreano conocido por su estilo visual impactante y narrativas retorcidas?", listOf(
+            Option("a) Park Chan-wook", true),
+            Option("b) Bong Joon-ho", false),
+            Option("c) Kim Ki-duk", false),
+            Option("d) Hong Sang-soo", false)
+        )),
+        Question("En la película 'The Big Lebowski', ¿cuál es el apodo del personaje principal, interpretado por Jeff Bridges?", listOf(
+            Option("a) The Dude", true),
+            Option("b) The Boss", false),
+            Option("c) The Captain", false),
+            Option("d) The Professor", false)
+        )),
+        Question("En la película '12 Monkeys', ¿quién interpreta al viajero en el tiempo que intenta prevenir una plaga mundial?", listOf(
+            Option("a) Bruce Willis", true),
+            Option("b) Brad Pitt", false),
+            Option("c) Edward Norton", false),
+            Option("d) Morgan Freeman", false)
+        )),
+        Question("En la película 'Children of Men', ¿cuál es el nombre del director de fotografía conocido por su uso de largos planos secuencia?", listOf(
+            Option("a) Emmanuel Lubezki", true),
+            Option("b) Roger Deakins", false),
+            Option("c) Janusz Kamiński", false),
+            Option("d) Wally Pfister", false)
+        )),
+
+                Question("En la película 'Whiplash', ¿quién interpreta al estricto y perfeccionista profesor de música Terence Fletcher?", listOf(
+            Option("a) J.K. Simmons", true),
+            Option("b) Miles Teller", false),
+            Option("c) Ethan Hawke", false),
+            Option("d) Paul Reiser", false)
         ))
 
-        // Agrega más preguntas aquí
+
+    // Agrega más preguntas aquí
     )
     var currentQuestion by remember { mutableStateOf(0) }
     var selectedOption by remember { mutableStateOf<Option?>(null) }
@@ -239,9 +415,9 @@ fun QuestionScreen(
                             // La opción seleccionada es incorrecta, puedes mostrar un mensaje de "Incorrecto".
                         }
                         visit.add(random)
-                        random= Random.nextInt(0,11)
+                        random= Random.nextInt(0,40)
                         while(visit.contains(random)){
-                            random= Random.nextInt(0,11)
+                            random= Random.nextInt(0,40)
                         }
 
 

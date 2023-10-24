@@ -76,9 +76,13 @@ fun PuntuationScreen(
 
 
         Button(onClick = {
+
+            navController.navigate(route = Screen.Category.route)
             total=0
             cont=0
-            navController.navigate(route = Screen.Category.route)
+            visit.clear()
+            visitBooks.clear()
+            visitTV.clear()
         }, Modifier.padding(top = 450.dp)) {
             Text(
                 "VOLVER A JUGAR",
