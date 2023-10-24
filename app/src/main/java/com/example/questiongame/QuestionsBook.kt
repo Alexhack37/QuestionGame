@@ -1,6 +1,7 @@
 package com.example.questiongame
 
 import android.graphics.BitmapFactory.Options
+import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -42,9 +43,9 @@ data class QuestionBooks(val text: String, val options: List<Option>)
 
 
 val visitBooks= mutableListOf<Int>()
-var randomBooks=Random.nextInt(0,36)
+var randomBooks=37
 var contBooks=0
-
+val videoUriBook = Uri.parse("android.resource://com.example.questiongame/raw/video2")
 @Composable
 fun TimerBooks(
     viewModel: CountDownTimerViewModel = viewModel(),
@@ -300,6 +301,11 @@ fun QuestionScreenBooks(
             Option("b) 'Veinte mil leguas de viaje submarino'", false),
             Option("c) 'Moby-Dick'", true),
             Option("d) 'Robinson Crusoe'", false)
+        )),
+        Question("¿En que libro se basa esta escena?", listOf(
+            Option("a) El Hobbit", false),
+            Option("b) El Señor de los Anillos", false),
+            Option("c) Harry Potter", true)
         ))
 
 
@@ -337,7 +343,10 @@ fun QuestionScreenBooks(
                     textAlign = TextAlign.Center
                 )
             }
-
+            if(randomBooks == questions.size-1)
+            {
+                VideoPlayer(videoUri = videoUriBook)
+            }
 
             Spacer(modifier = Modifier.height(16.dp))
             question.options.forEach { option ->
@@ -388,9 +397,9 @@ fun QuestionScreenBooks(
                             // La opción seleccionada es incorrecta, puedes mostrar un mensaje de "Incorrecto".
                         }
                         visitBooks.add(randomBooks)
-                        randomBooks= Random.nextInt(0,36)
+                        randomBooks= Random.nextInt(0,37)
                         while(visit.contains(randomBooks)){
-                            randomBooks= Random.nextInt(0,36)
+                            randomBooks= Random.nextInt(0,37)
                         }
 
                         reset = 1
