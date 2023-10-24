@@ -42,7 +42,7 @@ data class Question(val text: String, val options: List<Option>)
 
 var total =0
 var reset =0
-var random=0
+var random=Random.nextInt(0,11)
 var cont=0
 val visit= mutableListOf<Int>()
 
@@ -145,6 +145,12 @@ fun QuestionScreen(
             Option("b) Laurence Fishburne", false),
             Option("c) Hugo Weaving", false),
             Option("d) Tom Hanks", false)
+        )),
+        Question("¿Cuál de las siguientes películas es una película de terror sobre un asesino enmascarado llamado Michael Myers?", listOf(
+            Option("a) A Nightmare on Elm Street", false),
+            Option("b) Friday the 13th", false),
+            Option("c) Halloween", true),
+            Option("d) The Exorcist", false)
         ))
 
         // Agrega más preguntas aquí
@@ -208,11 +214,12 @@ fun QuestionScreen(
                             total+=0
                             // La opción seleccionada es incorrecta, puedes mostrar un mensaje de "Incorrecto".
                         }
-                        random= Random.nextInt(0,10)
-                        while(visit.contains(random)){
-                            random= Random.nextInt(0,10)
-                        }
                         visit.add(random)
+                        random= Random.nextInt(0,11)
+                        while(visit.contains(random)){
+                            random= Random.nextInt(0,11)
+                        }
+
 
 
                         reset = 1

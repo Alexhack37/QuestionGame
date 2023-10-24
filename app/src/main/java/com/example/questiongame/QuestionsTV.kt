@@ -32,6 +32,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.questiongame.ui.theme.CountDownTimerViewModel
+import kotlin.random.Random
 
 data class OptionTV(val text: String, val isCorrect: Boolean)
 
@@ -39,7 +40,9 @@ data class QuestionTV(val text: String, val options: List<Option>)
 
 
 
-
+val visitTV= mutableListOf<Int>()
+var randomSeries= Random.nextInt(0,11)
+var contSeries=0
 
 @Composable
 fun TimerTV(
@@ -154,8 +157,8 @@ fun QuestionScreenTV(
             .padding(2.dp),
         verticalArrangement = Arrangement.Center
     ) {
-        if (currentQuestionTv < questions.size) {
-            val question = questions[currentQuestionTv]
+        if (contSeries< 10) {
+            val question = questions[randomSeries]
             Box(){
                 Text(text = question.text, style = MaterialTheme.typography.bodySmall)
             }
@@ -189,7 +192,11 @@ fun QuestionScreenTV(
                             total+=0
                             // La opción seleccionada es incorrecta, puedes mostrar un mensaje de "Incorrecto".
                         }
-                        currentQuestionTv++
+                        visitTV.add(randomSeries)
+                        randomSeries= Random.nextInt(0,11)
+                        while(visitTV.contains(randomSeries)){
+                            randomSeries= Random.nextInt(0,11)
+                        }
                         reset = 1
                         selectedOptionTv = null
                     }

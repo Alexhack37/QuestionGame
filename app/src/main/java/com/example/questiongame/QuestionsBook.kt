@@ -32,14 +32,16 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.questiongame.ui.theme.CountDownTimerViewModel
+import kotlin.random.Random
 
 data class OptionBooks(val text: String, val isCorrect: Boolean)
 
 data class QuestionBooks(val text: String, val options: List<Option>)
 
 
-var totalBooks =0
-var resetBooks =0
+val visitBooks= mutableListOf<Int>()
+var randomBooks=Random.nextInt(0,11)
+var contBooks=0
 
 @Composable
 fun TimerBooks(
@@ -154,8 +156,8 @@ fun QuestionScreenBooks(
             .padding(2.dp),
         verticalArrangement = Arrangement.Center
     ) {
-        if (currentQuestionBooks < questions.size) {
-            val question = questions[currentQuestionBooks]
+        if (contBooks< 10) {
+            val question = questions[randomBooks]
             Box(){
                 Text(text = question.text, style = MaterialTheme.typography.bodySmall)
             }
@@ -190,7 +192,12 @@ fun QuestionScreenBooks(
                             total+=0
                             // La opción seleccionada es incorrecta, puedes mostrar un mensaje de "Incorrecto".
                         }
-                        currentQuestionBooks++
+                        visitBooks.add(randomBooks)
+                        randomBooks= Random.nextInt(0,10)
+                        while(visit.contains(randomBooks)){
+                            randomBooks= Random.nextInt(0,10)
+                        }
+
                         reset = 1
                         selectedOptionBooks = null
                     }
