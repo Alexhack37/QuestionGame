@@ -223,6 +223,7 @@ fun QuestionScreenTV(
                         while(visitTV.contains(randomSeries)){
                             randomSeries= Random.nextInt(0,11)
                         }
+                        contSeries+=1
                         reset = 1
                         selectedOptionTv = null
                     }

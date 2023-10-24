@@ -394,6 +394,7 @@ fun QuestionScreenBooks(
                         }
 
                         reset = 1
+                        contBooks+=1
                         selectedOptionBooks = null
                     }
                 },

@@ -148,7 +148,7 @@ fun QuestionScreen(
             Option("c) Hugo Weaving", false),
             Option("d) Tom Hanks", false)
         )),
-        Question("¿Cuál de las siguientes películas es una película de terror sobre un asesino enmascarado llamado Michael Myers?", listOf(
+        Question("¿Cuál es una película de terror sobre un asesino llamado Michael Myers?", listOf(
             Option("a) A Nightmare on Elm Street", false),
             Option("b) Friday the 13th", false),
             Option("c) Halloween", true),
@@ -178,7 +178,7 @@ fun QuestionScreen(
             Option("c) Brad Pitt", false),
             Option("d) Johnny Depp", false)
         )),
-        Question("En la película 'No Country for Old Men', ¿cuál es el nombre del asesino interpretado por Javier Bardem que utiliza una pistola de perno neumático?", listOf(
+        Question("En la película 'No Country for Old Men', ¿cuál es el nombre del asesino interpretado por Javier Bardem?", listOf(
             Option("a) Anton Chigurh", true),
             Option("b) Llewelyn Moss", false),
             Option("c) Ed Tom Bell", false),
@@ -196,13 +196,13 @@ fun QuestionScreen(
             Option("c) Todd Hockney", false),
             Option("d) Michael McManus", false)
         )),
-        Question("En la película 'A Clockwork Orange', el personaje principal, Alex DeLarge, es un amante de la música clásica. ¿Quién es su compositor favorito?", listOf(
+        Question("En la película 'La Naranja Mecanica', el personaje principal, Alex DeLarge, es un amante de la música clásica. ¿Quién es su compositor favorito?", listOf(
             Option("a) Beethoven", false),
             Option("b) Mozart", true),
             Option("c) Bach", false),
             Option("d) Chopin", false)
         )),
-        Question("En la película 'Memento', el protagonista Leonard Shelby sufre de una condición médica que le impide retener nuevos recuerdos a corto plazo. ¿Qué objeto usa para recordar información importante?", listOf(
+        Question("En la película 'Memento', el protagonista Leonard Shelby no puede retener nuevos recuerdos. ¿Qué objeto usa para recordar información importante?", listOf(
             Option("a) Un diario", false),
             Option("b) Tatuajes en su cuerpo", true),
             Option("c) Un reloj de pulsera especial", false),
@@ -214,7 +214,7 @@ fun QuestionScreen(
             Option("c) Coronel Kurtz", true),
             Option("d) Coronel Parker", false)
         )),
-        Question("En la película 'Citizen Kane', ¿cuál es el significado de la palabra 'Rosebud' que se convierte en el enigma central de la trama?", listOf(
+        Question("En la película 'Citizen Kane', ¿cuál es el significado de la palabra 'Rosebud'?", listOf(
             Option("a) El nombre de la amante de Charles Foster Kane", false),
             Option("b) El nombre de la madre de Charles Foster Kane", false),
             Option("c) El trineo de la infancia de Charles Foster Kane", true),
