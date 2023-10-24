@@ -114,7 +114,7 @@ fun QuestionScreenTV(
         Question("¿Cuál de estas series sigue la vida de un narcotraficante?", listOf(
             Option("a) Narcos", true),
             Option("b) Los Soprano", false),
-            Option("c) The Wire", false),
+            Option("c) Bajo escucha", false),
             Option("d) Oz", false)
         )),
         Question("¿Qué serie sigue las aventuras de un viajero en el tiempo con una nave espacial llamada TARDIS?", listOf(
@@ -153,7 +153,7 @@ fun QuestionScreenTV(
             Option("c) Benedict Cumberbatch", true),
             Option("d) Tom Hiddleston", false)
         )),
-        Question("En 'The Wire', ¿cuál es el nombre del detective interpretado por Idris Elba que se involucra en el tráfico de drogas?", listOf(
+        Question("En 'Bajo escucha', ¿cuál es el nombre del detective interpretado por Idris Elba que se involucra en el tráfico de drogas?", listOf(
             Option("a) Lester Freamon", false),
             Option("b) Jimmy McNulty", false),
             Option("c) Stringer Bell", true),
@@ -249,7 +249,7 @@ fun QuestionScreenTV(
             Option("c) Jerry Brudos", false),
             Option("d) Edmund Kemper", true)
         )),
-        Question("En 'The Handmaid's Tale', ¿cuál es el nombre del comandante interpretado, quien está casado con Serena Joy?", listOf(
+        Question("En 'El cuento de la criada', ¿cuál es el nombre del comandante interpretado, quien está casado con Serena Joy?", listOf(
             Option("a) Comandante Waterford", true),
             Option("b) Comandante Lawrence", false),
             Option("c) Comandante Winslow", false),

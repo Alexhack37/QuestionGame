@@ -103,10 +103,10 @@ fun QuestionScreen(
             Option("d) Roger Moore", false)
         )),
         Question("¿Cuál de las siguientes películas es una obra de ciencia ficción dirigida por Ridley Scott?", listOf(
-            Option("a) The Silence of the Lambs", false),
+            Option("a) El silencio de los corderos", false),
             Option("b) Blade Runner", true),
-            Option("c) The Godfather", false),
-            Option("d) Schindler's List", false)
+            Option("c) El Padrino", false),
+            Option("d) La lista de Schindler", false)
         )),
         Question("¿Quién dirigió la película 'El Padrino'?", listOf(
             Option("a) Martin Scorsese", false),
@@ -122,9 +122,9 @@ fun QuestionScreen(
         )),
         Question("¿Cuál de las siguientes películas es una comedia de ciencia ficción que parodia la cultura geek y los videojuegos?", listOf(
             Option("a) Scott Pilgrim vs. the World", true),
-            Option("b) Inception", false),
+            Option("b) Origen", false),
             Option("c) Blade Runner", false),
-            Option("d) The Dark Knight", false)
+            Option("d) El caballero oscuro", false)
         )),
         Question("¿Quién interpretó a Frodo Bolsón en la trilogía de 'El Señor de los Anillos'?", listOf(
             Option("a) Elijah Wood", true),
@@ -151,28 +151,28 @@ fun QuestionScreen(
             Option("d) Tom Hanks", false)
         )),
         Question("¿Cuál es una película de terror sobre un asesino llamado Michael Myers?", listOf(
-            Option("a) A Nightmare on Elm Street", false),
-            Option("b) Friday the 13th", false),
+            Option("a) Pesadilla en Elm Street", false),
+            Option("b) Viernes 13", false),
             Option("c) Halloween", true),
-            Option("d) The Exorcist", false)
+            Option("d) El exorcista", false)
         )),
-        Question("En la película 'The Shining', ¿quién interpreta al escritor Jack Torrance?", listOf(
+        Question("En la película 'El resplandor', ¿quién interpreta al escritor Jack Torrance?", listOf(
             Option("a) Jack Nicholson", true),
             Option("b) Al Pacino", false),
             Option("c) Marlon Brando", false),
             Option("d) Robert De Niro", false)
         )),
-        Question("En la película 'E.T. the Extra-Terrestrial', ¿quién es el director de la película?", listOf(
+        Question("En la película 'E.T. el extraterreste', ¿quién es el director de la película?", listOf(
             Option("a) George Lucas", false),
             Option("b) James Cameron", false),
             Option("c) Steven Spielberg", true),
             Option("d) Christopher Nolan", false)
         )),
-        Question("En la película 'The Dark Knight', ¿cuál es el nombre del personaje interpretado por Heath Ledger?", listOf(
-            Option("a) Two-Face", false),
-            Option("b) The Riddler", false),
-            Option("c) The Joker", true),
-            Option("d) Scarecrow", false)
+        Question("En la película 'El caballero Oscuro', ¿cuál es el nombre del personaje interpretado por Heath Ledger?", listOf(
+            Option("a) Dos caras", false),
+            Option("b) El acertijo", false),
+            Option("c) El Joker", true),
+            Option("d) Espantapajaros", false)
         )),
         Question("En la película 'Forrest Gump', ¿qué actor interpreta a Forrest Gump?", listOf(
             Option("a) Tom Hanks", true),
@@ -180,7 +180,7 @@ fun QuestionScreen(
             Option("c) Brad Pitt", false),
             Option("d) Johnny Depp", false)
         )),
-        Question("En la película 'No Country for Old Men', ¿cuál es el nombre del asesino interpretado por Javier Bardem?", listOf(
+        Question("En la película 'No es pais para viejos', ¿cuál es el nombre del asesino interpretado por Javier Bardem?", listOf(
             Option("a) Anton Chigurh", true),
             Option("b) Llewelyn Moss", false),
             Option("c) Ed Tom Bell", false),
@@ -192,7 +192,7 @@ fun QuestionScreen(
             Option("c) Anthony Hopkins", false),
             Option("d) Tom Hanks", false)
         )),
-        Question("En la película 'The Usual Suspects', ¿quién es el misterioso narrador de la historia, también conocido como Keyser Söze?", listOf(
+        Question("En la película 'Sospechosos habituales', ¿quién es el misterioso narrador de la historia, también conocido como Keyser Söze?", listOf(
             Option("a) Verbal Kint", true),
             Option("b) Dean Keaton", false),
             Option("c) Todd Hockney", false),
@@ -216,19 +216,19 @@ fun QuestionScreen(
             Option("c) Coronel Kurtz", true),
             Option("d) Coronel Parker", false)
         )),
-        Question("En la película 'Citizen Kane', ¿cuál es el significado de la palabra 'Rosebud'?", listOf(
+        Question("En la película 'Ciudadano Kane', ¿cuál es el significado de la palabra 'Rosebud'?", listOf(
             Option("a) El nombre de la amante de Charles Foster Kane", false),
             Option("b) El nombre de la madre de Charles Foster Kane", false),
             Option("c) El trineo de la infancia de Charles Foster Kane", true),
             Option("d) El apodo de Charles Foster Kane en la escuela", false)
         )),
-        Question("En la película 'Schindler's List', ¿cuál es el nombre del empresario alemán que salva a judíos durante el Holocausto?", listOf(
+        Question("En la película 'La lista de Schindler', ¿cuál es el nombre del empresario alemán que salva a judíos durante el Holocausto?", listOf(
             Option("a) Adolf Hitler", false),
             Option("b) Heinrich Himmler", false),
             Option("c) Oskar Schindler", true),
             Option("d) Joseph Goebbels", false)
         )),
-        Question("En la película 'The Godfather Part II', ¿qué actor interpreta al joven Vito Corleone?", listOf(
+        Question("En la película 'El Padrino II', ¿qué actor interpreta al joven Vito Corleone?", listOf(
             Option("a) Robert De Niro", true),
             Option("b) Al Pacino", false),
             Option("c) Marlon Brando", false),
@@ -240,13 +240,13 @@ fun QuestionScreen(
             Option("c) Guitarra", false),
             Option("d) Trompeta", false)
         )),
-        Question("En la película 'A Streetcar Named Desire', ¿quién interpreta el icónico papel de Blanche DuBois?", listOf(
+        Question("En la película 'Un tranvia llamado deseo', ¿quién interpreta el icónico papel de Blanche DuBois?", listOf(
             Option("a) Meryl Streep", false),
             Option("b) Bette Davis", false),
             Option("c) Vivien Leigh", true),
             Option("d) Katharine Hepburn", false)
         )),
-        Question("En la película 'The Truman Show', ¿quién interpreta al personaje principal, Truman Burbank?", listOf(
+        Question("En la película 'El show de Truman', ¿quién interpreta al personaje principal, Truman Burbank?", listOf(
             Option("a) Jim Carrey", true),
             Option("b) Tom Hanks", false),
             Option("c) Will Ferrell", false),
@@ -306,19 +306,19 @@ fun QuestionScreen(
             Option("c) Kim Ki-duk", false),
             Option("d) Hong Sang-soo", false)
         )),
-        Question("En la película 'The Big Lebowski', ¿cuál es el apodo del personaje principal, interpretado por Jeff Bridges?", listOf(
+        Question("En la película 'El Gran Lebowski', ¿cuál es el apodo del personaje principal, interpretado por Jeff Bridges?", listOf(
             Option("a) The Dude", true),
             Option("b) The Boss", false),
             Option("c) The Captain", false),
             Option("d) The Professor", false)
         )),
-        Question("En la película '12 Monkeys', ¿quién interpreta al viajero en el tiempo que intenta prevenir una plaga mundial?", listOf(
+        Question("En la película '12 Monos', ¿quién interpreta al viajero en el tiempo que intenta prevenir una plaga mundial?", listOf(
             Option("a) Bruce Willis", true),
             Option("b) Brad Pitt", false),
             Option("c) Edward Norton", false),
             Option("d) Morgan Freeman", false)
         )),
-        Question("En la película 'Children of Men', ¿cuál es el nombre del director de fotografía conocido por su uso de largos planos secuencia?", listOf(
+        Question("En la película 'Hijos de los hombres', ¿cuál es el nombre del director de fotografía conocido por su uso de largos planos secuencia?", listOf(
             Option("a) Emmanuel Lubezki", true),
             Option("b) Roger Deakins", false),
             Option("c) Janusz Kamiński", false),
@@ -332,9 +332,9 @@ fun QuestionScreen(
             Option("d) Paul Reiser", false)
         )),
         Question("¿A qué película pertenece esta escena?", listOf(
-            Option("a) The Orange Clockwork", false),
-            Option("b) Silence of the Lambs", false),
-            Option("c) The Shining", true)
+            Option("a) La naranja Mecanica", false),
+            Option("b) El silencio de los corderos", false),
+            Option("c) El resplandor", true)
         ))
 
 
