@@ -45,7 +45,7 @@ fun PuntuationScreen(
     }
     var numOfPoints by remember  { mutableStateOf(0) }
     var rest=(restTime.toInt()/1000)
-    numOfPoints=total* (restTime.toInt()/1000)
+    numOfPoints=total* (restTime.toInt()/1000)+total*2
     Box(
         modifier = Modifier
             .fillMaxSize()
