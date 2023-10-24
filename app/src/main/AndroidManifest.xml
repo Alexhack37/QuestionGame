@@ -25,5 +25,15 @@
         </activity>
 
     </application>
+    <ImageView
+        android:id="@++id/imagenView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mi_imagen" />
+
+    <VideoView
+        android:id="@++id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </manifest>

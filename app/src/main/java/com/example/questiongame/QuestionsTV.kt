@@ -1,6 +1,6 @@
 package com.example.questiongame
 
-import android.graphics.BitmapFactory.Options
+import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -37,7 +37,8 @@ data class OptionTV(val text: String, val isCorrect: Boolean)
 
 data class QuestionTV(val text: String, val options: List<Option>)
 
-
+val videoGot = Uri.parse("android.resource://com.example.questiongame/raw/got_siran")
+//val videoView = findView<VideoView>(R.id.VideoView)
 
 
 
@@ -116,6 +117,7 @@ fun QuestionScreenTV(
             Option("b) Star Trek", false),
             Option("c) The Expanse", false),
             Option("d) La fundacion", false)
+
         )),
         Question("¿Qué serie de comedia sigue la vida de un grupo de seis amigos que viven en Nueva York?", listOf(
             Option("a) Seinfield", false),
@@ -156,11 +158,16 @@ fun QuestionScreenTV(
     ) {
         if (currentQuestionTv < questions.size) {
             val question = questions[currentQuestionTv]
-            Box(){
+            Box {
+
                 Text(text = question.text, style = MaterialTheme.typography.bodySmall)
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                VideoPlayer(videoUri = videoGot)
+
             }
 
-            Spacer(modifier = Modifier.height(16.dp))
             question.options.forEach { option ->
                 RadioButton(
                     selected = option == selectedOptionTv,
@@ -207,7 +214,8 @@ fun QuestionScreenTV(
                 Text(
                     text = it,
                     fontSize = 50.sp,
-                    modifier = Modifier.padding(top = 16.dp)
+                    modifier = Modifier
+                        .padding(top = 16.dp)
                         .align(Alignment.CenterHorizontally)
                 )
             }
