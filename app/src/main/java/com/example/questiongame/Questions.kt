@@ -1,6 +1,7 @@
 package com.example.questiongame
 
 import android.graphics.BitmapFactory.Options
+import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -44,9 +45,10 @@ data class Question(val text: String, val options: List<Option>)
 
 var total =0
 var reset =0
-var random=Random.nextInt(0,40)
+var random=41
 var cont=0
 val visit= mutableListOf<Int>()
+val videoUri = Uri.parse("android.resource://com.example.questiongame/raw/video1")
 
 @Composable
 fun Timer(
@@ -328,6 +330,11 @@ fun QuestionScreen(
             Option("b) Miles Teller", false),
             Option("c) Ethan Hawke", false),
             Option("d) Paul Reiser", false)
+        )),
+        Question("¿A qué película pertenece esta escena?", listOf(
+            Option("a) The Orange Clockwork", false),
+            Option("b) Silence of the Lambs", false),
+            Option("c) The Shining", true)
         ))
 
 
@@ -346,7 +353,6 @@ fun QuestionScreen(
         }
     }
 
-
     Column(
         modifier = Modifier
             .padding(20.dp)
@@ -362,6 +368,10 @@ fun QuestionScreen(
                     fontSize = 30.sp,
                     textAlign = TextAlign.Center
                 )
+            }
+            if(random == questions.size-1)
+            {
+                VideoPlayer(videoUri = videoUri)
             }
 
 
@@ -415,9 +425,9 @@ fun QuestionScreen(
                             // La opción seleccionada es incorrecta, puedes mostrar un mensaje de "Incorrecto".
                         }
                         visit.add(random)
-                        random= Random.nextInt(0,40)
+                        random= Random.nextInt(0,41)
                         while(visit.contains(random)){
-                            random= Random.nextInt(0,40)
+                            random= Random.nextInt(0,41)
                         }
 
 
