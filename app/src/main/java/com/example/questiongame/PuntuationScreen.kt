@@ -75,7 +75,7 @@ fun PuntuationScreen(
         )
         Text(
             modifier=Modifier.padding(top = 200.dp),
-            text = " $numOfPoints PUNTOS",
+            text = "  PUNTOS $numOfPoints",
             color = Color.Black,
             fontSize = 50.sp,
             fontWeight = FontWeight.Bold
