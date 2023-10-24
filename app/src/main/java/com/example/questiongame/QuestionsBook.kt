@@ -144,7 +144,7 @@ fun QuestionScreenBooks(
             Option("a) '1984'", false),
             Option("b) 'Un Mundo Feliz'", false),
             Option("c) 'Fahrenheit 451'", true),
-            Option("d) '1984'", false)
+            Option("d) 'La fundacion'", false)
         )),
         Question("¿Quién es el autor de la serie de libros 'Cazadores de Sombras'?", listOf(
             Option("a) J.K. Rowling", false),
@@ -298,7 +298,7 @@ fun QuestionScreenBooks(
         )),
         Question("¿Cuál es el título de la novela de Herman Melville que narra la obsesión del capitán Ahab por una ballena?", listOf(
             Option("a) 'La isla del tesoro'", false),
-            Option("b) 'Veinte mil leguas de viaje submarino'", false),
+            Option("b) '20000 leguas de viaje submarino'", false),
             Option("c) 'Moby-Dick'", true),
             Option("d) 'Robinson Crusoe'", false)
         )),
